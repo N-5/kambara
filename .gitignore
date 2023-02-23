@@ -1,0 +1,6 @@
+dist/
+public/
+node_modules/
+movefile.yml
+.ssh
+.bash_history
