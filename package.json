@@ -17,6 +17,7 @@
     "production": "mix --production"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "autoprefixer": "^10.4.13",
     "cpx": "^1.5.0",
     "css-declaration-sorter": "^6.3.1",
@@ -26,6 +27,7 @@
     "laravel-mix": "^6.0.49",
     "laravel-mix-eslint": "^0.2.0",
     "mini-css-extract-plugin": "^2.7.2",
+    "polyfill": "^0.1.0",
     "postcss": "^8.4.21",
     "postcss-custom-media": "^9.1.1",
     "postcss-loader": "^7.0.2",
@@ -33,11 +35,13 @@
     "reset-css": "^5.0.1",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
+    "slick-slider": "^1.8.2",
     "style-loader": "^3.3.1",
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
     "stylelint-order": "^6.0.1",
     "stylelint-webpack-plugin": "^4.0.0",
+    "svgxuse": "^1.2.6",
     "webpack-dev-server": "^4.11.1"
   }
 }

@@ -1,0 +1,12 @@
+#app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.l-container {
+  padding: 0 15px;
+
+  @media (--md) {
+    padding: 0 50px;
+  }
+}

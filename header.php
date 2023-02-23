@@ -5,9 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <meta name=”viewport” content=”width=device-width,initial-scale=1″>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/app.css" rel="stylesheet">
     <title><?php wp_title(); ?></title>
-    <?php get_template_part('lib/favicons'); ?>
+    <?php //get_template_part('lib/favicons'); ?>
     <?php wp_head() ?>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,7 +22,73 @@
 
     <div id="app">
       <header id="header" class="header">
-        <div class="inner">
-          
+        <div class="header_inner">
+          <div class="header_logo">
+            <a href="<?php echo home_url(); ?>">
+              <span class="header_logo_kamon">
+                <svg>
+                  <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/symbol-defs.svg#logo_kamon"></use>
+                </svg>
+              </span>
+              <span class="header_logo_text">
+                <svg>
+                  <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/symbol-defs.svg#logo_text"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="header_gnav">
+            <ul class="header_nav">
+              <li class="header_nav_item js-accordion">
+                <span class="js-accordion-parent is-active">お知らせ＋</span>
+                <ul class="js-accordion-child is-active">
+                  <li>
+                    <a href="<?php echo home_url(); ?>/news/">
+                      ―ニュース
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo home_url(); ?>/media/">
+                      ―メディア掲載情報
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header_nav_item">
+                <a href="<?php echo home_url(); ?>/schedule/">
+                  年間<br>
+                  スケジュール
+                </a>
+              </li>
+              <li class="header_nav_item">
+                <a href="<?php echo home_url(); ?>/chat/">
+                  ファミリー<br>
+                  チャット
+                </a>
+              </li>
+              <li class="header_nav_item">
+                <a href="<?php echo home_url(); ?>/interview/">
+                  インタビュー
+                </a>
+              </li>
+              <li class="header_nav_item">
+                <a href="<?php echo home_url(); ?>/member/">
+                  ファミリー<br>
+                  メンバー
+                </a>
+              </li>
+            </ul>
+
+            <div class="header_humberger js-gnav-trigger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header_menu js-gnav">
+
         </div>
       </header>

@@ -1,4 +1,6 @@
 {
     "/assets/js/app.js": "/assets/js/app.js",
-    "/assets/css/app.css": "/assets/css/app.css"
+    "/assets/css/app.css": "/assets/css/app.css",
+    "/assets/images/login-logo.png": "/assets/images/login-logo.png",
+    "/assets/images/common/symbol-defs.svg": "/assets/images/common/symbol-defs.svg"
 }
