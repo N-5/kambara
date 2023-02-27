@@ -1,0 +1,19 @@
+#error {
+  .error {
+    &-notpage {
+      &__title {
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-family: $font-en-serif;
+      }
+
+      .m-top_readmore {
+        margin-top: 50px;
+
+        @media (--md) {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}

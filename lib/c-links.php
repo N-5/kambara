@@ -48,7 +48,7 @@
     </a>
   </li>
   <li>
-    <a href="<?php echo home_url(); ?>/company/">
+    <a href="<?php echo home_url(); ?>/company-profile/">
       会社情報
     </a>
   </li>

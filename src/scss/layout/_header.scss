@@ -23,12 +23,9 @@
     transition: .4s ease all;
     transition-delay: 1.5s;
 
-    @media (--lg) {
-      transform: scale(.8);
-    }
-
     a {
       display: flex;
+      align-items: center;
       
       span {
         display: inline-block
@@ -47,8 +44,9 @@
       transition: .24s ease all;
 
       @media (--lg) {
-        width: 50px;
-        height: 50px;
+        width: 46px;
+        height: 46px;
+        margin-right: 15px;
       }
 
       @media (--xl) {
@@ -70,7 +68,7 @@
       }
 
       @media (--xl) {
-        width: 200px;
+        width: 180px;
         height: 60px;
       }
     }
@@ -89,12 +87,12 @@
       display: flex;
       font-size: 14px;
       margin-right: 20px;
+      line-height: 1.4;
     }
 
     @media (--xl) {
       margin-right: 40px;
       // font-size: 17px;
-      line-height: 1.4;
     }
 
     a {

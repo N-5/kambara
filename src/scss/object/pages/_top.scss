@@ -304,5 +304,316 @@
   .schedule {
     position: relative;
     @extend %section_layout;
+
+    &_calender {
+      @media (--md) {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+
+    .c-scheduleCalendar {
+      @media (--md) {
+        width: 47%;
+        margin-left: 3%;
+      }
+    }
+
+    &_month {
+      margin-top: 30px;
+
+      @media (--md) {
+        width: 47%;
+        margin-top: 0;
+        margin-right: 3%;
+      }
+
+      > h4 {
+        line-height: 1.6;
+
+        @media (--md_max) {
+          position: absolute;
+          top: 0;
+          right: 15px;
+        }
+
+        @media (--md) {
+          margin-bottom: 30px;
+        }
+
+        .en {
+          font-family: $font-en-serif;
+          font-size: 15px;
+
+          @media (--md) {
+            font-size: 14px;
+          }
+        }
+
+        .jp {
+          font-family: $font-serif;
+          font-size: 22px;
+        }
+      }
+
+      &_archive {
+        @media (--md) {
+          display: flex;
+          flex-flow: row wrap;
+        }
+        
+        &_post {
+          margin-bottom: 30px;
+          @media (--md) {
+            width: 50%;
+          }
+
+          time {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 10px;
+            font-family: $font-en-sans;
+            color: $color-main-light;
+          }
+
+          div {
+            font-size: 14px;
+
+            @media (--md) {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .links {
+    position: relative;
+
+    @media (--md) {
+      margin-top: 120px;
+    }
+
+    .l-column2 {
+      @media (--md) {
+        align-items:stretch;
+      }
+    }
+
+    .m-top_readmore {
+      margin-bottom: 0;
+    }
+
+    .companyGrid {
+      @media (--md) {
+        flex-direction: row-reverse;
+      }
+
+      &_family {
+        .l-column2 {
+          @media (--md_max) {
+            display: flex;
+            justify-content: space-between;
+
+            &_item {
+              width: 49%;
+            }
+          }
+        }
+      }
+
+      &_profile,
+      &_chat,
+      &_motto,
+      &_tree,
+      &_groupmagazine,
+      &_familymagazine {
+        position: relative;
+        height: 140px;
+        margin-bottom: 10px;
+        background-color: #ccc;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        color: $color-white;
+        text-shadow: 0 0 10px $color-black;
+        overflow: hidden;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transition: .24s ease;
+          background-position: center;
+          z-index: 0;
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: $color-main;
+          z-index: 0;
+        }
+
+        @media (--md) {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: .24s ease-out;
+
+          &:hover {
+            &::after {
+              opacity: .8;
+              transform: scale(1.05);
+            }
+          }
+        }
+
+        .inner {
+          position: relative;
+          z-index: 1;
+          
+          @media (--md_max) {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+          }
+
+          .m-top_h2 {
+            margin-top: 40px;
+
+            @media (--md) {
+              margin-top: 0;
+              margin-bottom: 40px;
+            }
+
+            .en,
+            .jp {
+              font-size: 16px;
+              
+              @media (--md) {
+                font-size: 16px;
+                line-height: 1.1;
+              }
+
+              @media (--lg) {
+                font-size: 20px;
+              }
+
+              @media (--xl) {
+                font-size: 26px;
+              }
+            }
+          }
+
+          .m-top_readmore {
+            display: inline-block;
+            
+            @media (--md_max) {
+              position: absolute;
+              left: calc(50% - 38px);
+              bottom: 15px;
+              transform: translate(0, -50%);
+            }
+
+            a {
+              color: $color-white;
+            }
+          }
+        }
+      }
+
+      &_profile {
+        height: 400px;
+
+        @media (--md) {
+          height: 737px;
+        }
+        
+        &::after {
+          background-image: url('../images/top/img_linkbg_1.jpg');
+        }
+      }
+
+      &_chat {
+        height: 200px;
+
+        @media (--md) {
+          height: 360px;
+        }
+
+        &::after {
+          background-image: url('../images/top/img_linkbg_2.jpg');
+        }
+      }
+
+      &_motto {
+        height: 160px;
+
+        @media (--md) {
+          height: 367px;
+        }
+
+        &::after {
+          background-image: url('../images/top/img_linkbg_3.jpg');
+        }
+      }
+
+      &_tree {
+        height: 160px;
+
+        @media (--md) {
+          height: 367px;
+        }
+
+        &::after {
+          background-image: url('../images/top/img_linkbg_4.jpg');
+        }
+      }
+
+      &_groupmagazine {
+        height: 160px;
+
+        @media (--md) {
+          height: 280px;
+        }
+        
+        &::after {
+          background-image: url('../images/top/img_linkbg_5.jpg');
+        }
+      }
+
+      &_familymagazine {
+        height: 160px;
+
+        @media (--md) {
+          height: 280px;
+        }
+
+        &::after {
+          background-image: url('../images/top/img_linkbg_6.jpg');
+        }
+      }
+    }
+
+    .groupGrid {
+      margin-top: 10px;
+
+      @media (--md) {
+        margin-top: 0;
+      }
+    }
   }
 }

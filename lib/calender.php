@@ -42,24 +42,26 @@ $youbi = date('w', mktime(0, 0, 0,date('m', $timestamp), 1, date("Y", $timestamp
 //曜日を月曜始まりに変更　
 $youbi = ($youbi == 0) ? 6 : $youbi - 1;
 
+//エラー
 $countid = 0;
-$databuf = 0;
 
 function mycalendar_fillevents($databuf, $startday, $endday, $countid, $url) {
 	$curday = $startday;
 
 	for ($i = 0; $i < (int)$endday - (int)$startday + 1; $i++) {
 		$curday = $startday + $i; // カレンダーの日付
-			// 同日に複数イベントが入った場合のID
-	if (is_array($databuf[$curday])) {
-        $countid = count($databuf[$curday]);
-		
-	}else{
-		$countid = 0;
-	}
-		$databuf[$curday][$countid]["url"] = $url;
-	}
-	return $databuf;
+		// 同日に複数イベントが入った場合のID
+		// $databuf = [0];
+
+		if (is_array($databuf[$curday])) {
+			$countid = count($databuf[$curday]);
+			
+		}else{
+			$countid = 0;
+		}
+			$databuf[$curday][$countid]["url"] = $url;
+		}
+		return $databuf;
 }
 
 //
@@ -71,7 +73,7 @@ $args = array(
 	'orderby'    => 'meta_value',
 	'order'      => 'ASC',
 	'posts_per_page' => -1
-	);
+);
 
 // The Query
 $the_query = new WP_Query( $args );
@@ -111,7 +113,10 @@ if ( $the_query->have_posts() ) {
 			// 1日のみのイベントなので、現在のカレンダーの年月に合致した場合のみデータベースにFILLする
 			// single day event. yyyy/mm/dd
 			// year and month matched. fill the event to the buffer.
+			
 			$databuf = mycalendar_fillevents($databuf, $startday, $startday, $countid, $url);
+
+			
 			
 		} else if (count($datearray) > 1) {
 			// 複数日イベント
@@ -212,7 +217,7 @@ $week .= str_repeat('<td></td>', $youbi);
 for ($day=1; $day <= $day_count; $day++, $youbi++){
 	
 	if (array_key_exists($day, $databuf)) {
-		$week .= '<td>' . $day . '<br><span class="marker"><a href=/archives/category/event?list='; //★アーカイブ用URL。'event'のところにカテゴリーのスラッグ名を入れる
+		$week .= '<td class="is-on js-expandlink"><a href=/archives/category/event?list=';
 		$total_event = count($databuf[$day]);
 		for ($i = 0; $i < $total_event; $i++) { 
 			$list = $databuf[$day][$i]['url'] . ','; //日別アーカイブ用
@@ -222,7 +227,7 @@ for ($day=1; $day <= $day_count; $day++, $youbi++){
 			$event_list = implode('',$arr_list);
 
 			$week .= $list;
-		}   $week .= '&calendar='. $page_ym . str_pad($day, 2, '0', STR_PAD_LEFT) . '>' . $total_event . '</span></a>'; //イベント件数表示
+		}   $week .= '&calendar='. $page_ym . str_pad($day, 2, '0', STR_PAD_LEFT) . '>' . $day . '</a>'; //イベント件数表示
 		
 	} else {
 		$week .= '<td>'. $day ;
@@ -248,10 +253,18 @@ for ($day=1; $day <= $day_count; $day++, $youbi++){
 }
 
 ?>
-<div class="tablecalendar">
-	<h4><a href="?ym=<?php echo $prev;?>#calendar" class="prev">≪</a>&nbsp;&nbsp;<a href="/archives/category/event?list=<?php echo $event_list ;?>&calendar=<?php echo $page_ym ;?>"><?php echo $html_title;?></a>&nbsp;&nbsp;<a href="?ym=<?php echo $next;?>#calendar" class="next">≫</a></h4>
-		<table id="wp-calendar">
-			<thead>
+<div class="c-scheduleCalendar">
+	<h4>
+		<a href="?ym=<?php echo $prev;?>#calendar" class="prev">≪</a>
+		&nbsp;&nbsp;
+		<a href="/archives/category/event?list=<?php echo $event_list ;?>&calendar=<?php echo $page_ym ;?>">
+			<?php echo $html_title;?>
+		</a>&nbsp;&nbsp;
+		<a href="?ym=<?php echo $next;?>#calendar" class="next">≫</a>
+	</h4>
+
+	<table class="c-scheduleCalendar_table">
+		<thead>
 			<tr>
 				<th>月</th>
 				<th>火</th>
@@ -261,14 +274,14 @@ for ($day=1; $day <= $day_count; $day++, $youbi++){
 				<th>土</th>
 				<th>日</th>
 			</tr>
-			</thead>
-			<tbody>
-	 	<?php
+		</thead>
+		<tbody>
+			<?php
 		 	//カレンダー表示
-		 	foreach ($weeks as $week){
+			foreach ($weeks as $week){
 				echo $week;
 			}
 		?>
-			</tbody>
-		</table>
-	</div>
+		</tbody>
+	</table>
+</div>

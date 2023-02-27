@@ -80,9 +80,24 @@ function remove_dashboard_widget() {
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widget');
 
+
+//not auth redirect
+function my_require_login() {
+  global $pagenow;
+  if ( ! is_user_logged_in() &&
+    $pagenow !== 'wp-login.php' &&
+    ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) &&
+    ! ( defined( 'DOING_CRON' ) && DOING_CRON ) ) {
+  auth_redirect();
+  }
+}
+add_action( 'init', 'my_require_login' );
+
 //after login, redirect
 function custom_login_redirect() {
-  return '/wp-admin/edit.php?post_type=news';
+  $logo_url = get_bloginfo( 'url' );
+  
+  return $logo_url;
 }
 add_filter('login_redirect', 'custom_login_redirect');
 
@@ -154,7 +169,7 @@ function implement_custom_posts($value='') {
   $news = (object) array(
     "slug" => "news",
     "name" => "ニュース",
-    "has_archive" => false,
+    "has_archive" => true,
   );
   $member = (object) array(
     "slug" => "member",
@@ -221,6 +236,17 @@ function implement_custom_posts_category($value) {
     $args
   );
 }
+
+//サイドバーメニューからカテゴリー、タグを削除（カスタム投稿とカスタムタクソノミー）
+function remove_menu() {
+    remove_submenu_page('edit.php?post_type=news', 'edit-tags.php?taxonomy=news-category&amp;post_type=news');
+    remove_submenu_page('edit.php?post_type=member', 'edit-tags.php?taxonomy=member-category&amp;post_type=member');
+    remove_submenu_page('edit.php?post_type=interview', 'edit-tags.php?taxonomy=interview-category&amp;post_type=interview');
+    remove_submenu_page('edit.php?post_type=schedule', 'edit-tags.php?taxonomy=schedule-category&amp;post_type=schedule');
+    remove_submenu_page('edit.php?post_type=groupmagazine', 'edit-tags.php?taxonomy=groupmagazine-category&amp;post_type=groupmagazine');
+    remove_submenu_page('edit.php?post_type=familymagazine', 'edit-tags.php?taxonomy=familymagazine-category&amp;post_type=familymagazine');
+}
+add_action('admin_menu', 'remove_menu');
 
 //post type setting
 function add_custom($value) {

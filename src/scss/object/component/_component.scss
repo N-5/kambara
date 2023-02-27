@@ -253,6 +253,29 @@
   }
 }
 
+.c-pagination {
+  margin-top: 40px;
+
+  @media (--md) {
+    margin-top: 60px;
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: center;
+    font-family: $font-sans;
+    font-size: 14px;
+
+    @media (--md) {
+      font-size: 15px;
+    }
+
+    .page-numbers {
+      margin: 0 5px;
+    }
+  }
+}
+
 .c-loader {
   position: fixed;
   width: 100%;
@@ -373,6 +396,7 @@
     font-family: $font-en-sans;
     color: $color-main-light;
     font-size: 10px;
+    line-height: 2.2;
 
     @media (--md) {
       font-size: 11px;
@@ -385,6 +409,24 @@
 
     @media (--md) {
       font-size: 15px;
+    }
+  }
+
+  &_archive {
+    .c-newslist_item {
+      margin-top: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #c0cad6;
+
+      .c-newslist_title {
+        @media (--md) {
+          font-size: 15px;
+        }
+      }
+
+      a {
+        display: block;
+      }
     }
   }
 }
@@ -471,6 +513,88 @@
       margin-top: 80px;
       font-size: 13px;
       line-height: 2.1;
+    }
+  }
+}
+
+.c-scheduleCalendar {
+  h4 {
+    display: none;
+  }
+
+  &_table {
+    font-family: $font-en-sans;
+    width: 100%;
+    font-size: 10px;
+
+    @media (--md) {
+      font-size: 11px;
+    }
+    
+    tr {
+      th {
+        padding: 10px 10px;
+
+        @media (--md) {
+          padding: 12px 10px;
+        }
+      }
+
+      td {
+        padding: 20px 10px;
+
+        @media (--md) {
+          padding: 20px 10px;
+        }
+
+        @media (--lg) {
+          padding: 18px 10px;
+        }
+
+        @media (--xl) {
+          padding: 32px 10px;
+        }
+      }
+    }
+
+    thead {
+      border-top: 2px solid $color-white;
+      border-right: 2px solid $color-white;
+      border-left: 2px solid $color-white;
+      font-family: $font-sans;
+      font-style: 10px;
+    }
+
+    tbody {
+      text-align: center;
+
+      tr {
+        border-top: 2px solid $color-white;
+
+        &:last-child {
+          border-bottom: 2px solid $color-white;
+        }
+
+        td {
+          border-left: 2px solid $color-white;
+
+          &:last-child {
+            border-right: 2px solid $color-white;
+          }
+
+          &.is-on {
+            cursor: pointer;
+            background-color: #d2d4d6;
+            transition: .24s ease all;
+
+            @media (--md) {
+              &:hover {
+                background-color: $color-grey;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
