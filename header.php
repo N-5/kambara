@@ -16,12 +16,12 @@
   </head>
 
   <body>
-    <div class="loader">
-			<div id="loader_content"></div>
+    <div class="c-loader">
+			<div id="c-loader_content"></div>
 		</div>
 
     <div id="app">
-      <header id="header" class="header">
+      <header id="header" class="header js-floatingMenu is-view">
         <div class="header_inner">
           <div class="header_logo">
             <a href="<?php echo home_url(); ?>">
@@ -40,7 +40,7 @@
 
           <div class="header_gnav">
             <ul class="header_nav">
-              <li class="header_nav_item js-accordion">
+              <li class="header_nav_item js-accordion c-accordion">
                 <span class="js-accordion-parent is-active">お知らせ＋</span>
                 <ul class="js-accordion-child is-active">
                   <li>
@@ -81,14 +81,30 @@
             </ul>
 
             <div class="header_humberger js-gnav-trigger">
-              <span></span>
-              <span></span>
-              <span></span>
+              <button aria-controls="header_menu" role="button">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="header_menu js-gnav">
-
-        </div>
       </header>
+
+      <div class="header_menu js-gnav">
+        <div class="header_menu_inner">
+          <div class="header_menu_links">
+            <?php get_template_part('lib/c-links'); ?>
+          </div>
+
+          <div class="header_menu_search">
+            <?php get_template_part('lib/c-searchform'); ?>
+          </div>
+
+          <div class="header_menu_mail">
+            <a href="mailto:family-info@kambara-f.com">
+              問い合わせ先  |  family-info@kambara-f.com
+            </a>
+          </div>
+        </div>
+      </div>

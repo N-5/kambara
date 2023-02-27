@@ -1,6 +1,29 @@
 #app {
   position: relative;
   min-height: 100vh;
+  padding-bottom: 674px;
+  z-index: 0;
+
+  @media (--md) {
+    padding-bottom: 734px;
+  }
+
+  @media (--lg) {
+    padding-bottom: 496px;
+  }
+
+
+}
+
+main {
+  transition: .6s cubic-bezier(0.42, 0, 0.24, 1.03) all;
+  transition-delay: .6s;
+
+  &.is-open {
+    transform: translate(-50%, 0);
+    transition: 1.2s cubic-bezier(0.42, 0, 0.24, 1.03) all;
+    transition-delay: .6s;
+  }
 }
 
 .l-container {
@@ -8,5 +31,10 @@
 
   @media (--md) {
     padding: 0 50px;
+  }
+
+  @media (--xl) {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }

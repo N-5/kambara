@@ -1,451 +1,56 @@
-//Link
-.m-link {
+.m-top_h2 {
   position: relative;
-  overflow: hidden;
-
-  a {
-    display: block;
-    height: 50px;
-    font-family: $font-en;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: .1em;
-
-    @include media(md) {
-      height: 60px;
-      font-size: 17px;
-      letter-spacing: .2em;
-    }
-
-    span {
-      position: absolute;
-      top: 51%;
-      left: 7%;
-      transform: translate(0, -50%);
-      line-height: 1;
-    }
-
-    &::after {
-      @extend %transition;
-
-      content: '';
-      position: absolute;
-      top: 46%;
-      right: 5%;
-      width: 12px;
-      height: 12px;
-      border-right: 1px solid $color-white;
-      border-top: 1px solid $color-white;
-      transform: rotate(45deg) translate(-50%, 0);
-
-      @include media(md) {
-        height: 16px;
-        width: 16px;
-      }
-    }
-
-    &::before {
-      @extend %transition;
-
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: $color-white;
-      transform: translateX(-100%);
-      z-index: 0;
-    }
-
-    &:hover {
-      @include media(md) {
-        color: $color-main;
-
-        &::before {
-          transform: translateX(0);
-        }
-
-        &::after {
-          border-color: $color-main;
-        }
-      }
-    }
-  }
-
-  &__border {
-    border: 1px solid $color-white;
-    color: $color-white;
-
-    a {
-      color: $color-white;
-    }
-  }
-
-  &__white {
-    border: 1px solid $color-white;
-
-    a {
-      background-color: $color-white;
-
-      &::before {
-        background: $color-main;
-      }
-
-      &::after {
-        border-color: $color-main;
-      }
-
-      span {
-        color: $color-main;
-      }
-    }
-
-    &:hover {
-      @include media(md) {
-        border: 1px solid $color-white;
-
-        a {
-          &::after {
-            border-color: $color-white !important;
-          }
-
-          span {
-            color: $color-white;
-          }
-        }
-      }
-    }
-  }
-
-  &__blueborder {
-    border: 1px solid $color-main;
-    color: $color-main;
-
-    a {
-      color: $color-main;
-
-      &::after {
-        border-color: $color-main;
-      }
-
-      &:hover {
-        @include media(md) {
-          span {
-            color: $color-white;
-          }
-
-          &::before {
-            background: $color-main;
-          }
-
-          &::after {
-            border-color: $color-white !important;
-          }
-        }
-      }
-    }
-  }
-
-  &__list {
-    border: 1px solid $color-main;
-
-    a {
-      background: $color-main;
-      color: $color-white;
-    }
-  }
-
-  &__newgraduate {
-    border: 1px solid $color-main-light;
-
-    a {
-      background: $color-main-light;
-      color: $color-white;
-    }
-  }
-
-  &__download {
-    a {
-      color: $color-main;
-      border: 1px solid $color-main;
-
-      &::before {
-        background: $color-main;
-      }
-
-      &::after {
-        content: none;
-      }
-
-      span {
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        i {
-          position: absolute;
-          margin-left: 10px;
-        }
-      }
-
-      &:hover {
-        @include media(md) {
-          color: $color-white;
-
-          &::after {
-            background: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-.m-link__target {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-  color: $color-main;
-  font-family: $font-en;
-
-  @include media(md) {
-    margin-left: 25px;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: -20px;
-    height: 11px;
-    width: 15px;
-    background: url('../img/common/blank_blue.svg') no-repeat center/cover;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background-color: $color-main;
-    transition: .2s ease all;
-  }
-
-  &:hover {
-    @include media(md) {
-      &::after {
-        width: 0;
-      }
-    }
-  }
-}
-
-//title
-.m-page-title {
-  .m-page-title__inner {
-    position: relative;
-    max-width: 1040px;
-    height: 156px;
-    width: 90%;
-    margin: 0 auto;
-
-    @include media(sm) {
-      height: 275px;
-    }
-
-    @include media(md) {
-      height: 350px;
-    }
-
-    @include media(xl) {
-      height: 406px;
-    }
-
-    .heading {
-      position: absolute;
-      top: 50%;
-      color: $color-white;
-      font-size: 26px;
-      font-family: $font-en;
-      letter-spacing: .1em;
-      line-height: 1;
-      z-index: 3;
-      transform: translate(0, -50%);
-      transition: .24s ease all;
-
-      @include media(md) {
-        font-size: 60px;
-      }
-
-      @include media(lg) {
-        top: 220px;
-      }
-
-      span {
-        display: block;
-        margin-top: 10px;
-        font-weight: normal;
-        font-size: 10px;
-
-        @include media(sm) {
-          font-size: 13px;
-        }
-
-        @include media(md) {
-          margin-top: 15px;
-          font-size: 16px;
-        }
-      }
-    }
-
-    .backimage {
-      position: fixed;
-      top: 50px;
-      left: 50%;
-      width: 800px;
-      margin: 0 auto;
-      transform: translate(-50%, 0);
-
-      @include media(sm) {
-        height: 1000px;
-      }
-
-      @include media(md) {
-        width: 1200px;
-      }
-
-      @include media(lg) {
-        width: 100%;
-        top: 77px;
-      }
-    }
-  }
-
-  &.cover-area {
-    background: #327da2;
-  }
-}
-
-.m-section-title {
-  color: $color-main;
-  font-family: $font-en;
-  font-size: 28px;
-  line-height: 1;
-  letter-spacing: .1em;
-  font-weight: bold;
-
-  @include media(md) {
-    font-size: 40px;
-  }
-
-  span {
-    display: block;
-    margin-top: 10px;
-    font-size: 13px;
-    font-weight: normal;
-
-    @include media(md) {
-      margin-top: 10px;
-      font-size: 19px;
-    }
-  }
-
-  &.title-white {
-    color: $color-white;
-  }
-}
-
-.m-block-title {
-  color: $color-main;
-  font-size: 18px;
-  font-weight: normal;
-
-  @include media(md) {
-    font-size: 25px;
-  }
-}
-
-.m-card-title {
-  color: $color-main;
   font-size: 16px;
-  font-weight: bold;
 
-  @include media(md) {
-    font-size: 20px;
+  @media (--md) {
+    font-size: 15px;
   }
-}
 
-.m-top-section__title {
   .en {
-    font-family: $font-en;
-    font-weight: bold;
-    font-size: 33px;
-    line-height: 1;
-    letter-spacing: .06em;
-
-    @include media(md) {
-      font-size: 56px;
-    }
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: $font-en-serif;
   }
 
   .jp {
-    display: block;
-    margin-top: 8px;
-    line-height: 1;
-    font-size: 14px;
-
-    @include media(md) {
-      margin-top: 18px;
-      font-size: 19px;
-    }
+    font-family: $font-serif;
   }
 }
 
-.m-top-section__copy {
-  font-size: 4.4vw;
-  letter-spacing: .2em;
-  line-height: 2;
+.m-top_readmore {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c0cad6;
 
-  @include media(sm) {
-    font-size: 16px;
+  @media (--md) {
+    padding-bottom: 15px;
   }
+  
+  a {
+    position: relative;
+    font-size: 12px;
 
-  @include media(md) {
-    font-size: 25px;
-    letter-spacing: .25em;
-  }
-}
+    @media (--md) {
+      font-size: 13px;
 
-.m-recruit-section__title {
-  text-align: center;
-  color: $color-main;
-
-  span {
-    line-height: 1;
-
-    &.jp {
-      font-size: 30px;
-      letter-spacing: .4em;
-
-      @include media(lg) {
-        font-size: 41px;
+      &:hover {
+        &::after {
+          transform: translate(4px, 0);
+        }
       }
     }
 
-    &.en {
-      display: block;
-      margin-top: 10px;
-      letter-spacing: .1em;
-      text-indent: -.6em;
-      font-size: 14px;
-      font-family: $font-en;
-      font-weight: bold;
+    &::after {
+      content: '〉';
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 12px;
+      transition: .24s ease all;
 
-      @include media(lg) {
-        margin-top: 20px;
-        font-size: 23px;
+      @media (--md) {
+        top: 1px;
       }
     }
   }

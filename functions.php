@@ -88,7 +88,7 @@ add_filter('login_redirect', 'custom_login_redirect');
 
 //login logo
 function custom_login_logo() {
-	echo '<style type="text/css">.login h1 a { width: 242px !important; height: 54px !important; background: url('.get_bloginfo('template_directory').'/src/images/login-logo.png) no-repeat center center !important; margin-bottom: 30px !important; background-size: cover !important;}</style>';
+	echo '<style type="text/css">.login h1 a { width: 242px !important; height: 54px !important; background: url('.get_bloginfo('template_directory').'/src/images/login/login-logo.png) no-repeat center center !important; margin-bottom: 30px !important; background-size: cover !important;}</style>';
 }
 add_action( 'login_enqueue_scripts', 'custom_login_logo' );
 
@@ -166,18 +166,23 @@ function implement_custom_posts($value='') {
     "name" => "メディア",
     "has_archive" => true,
   );
+  $schedule = (object) array(
+    "slug" => "schedule",
+    "name" => "年間スケジュール",
+    "has_archive" => false,
+  );
   $interview = (object) array(
     "slug" => "interview",
     "name" => "インタビュー",
     "has_archive" => true,
   );
-  $tsuneishi = (object) array(
-    "slug" => "tsuneishi",
+  $groupmagazine = (object) array(
+    "slug" => "groupmagazine",
     "name" => "つねいし",
     "has_archive" => true,
   );
-  $miroku = (object) array(
-    "slug" => "miroku",
+  $familymagazine = (object) array(
+    "slug" => "familymagazine",
     "name" => "みろく",
     "has_archive" => true,
   );
@@ -185,9 +190,10 @@ function implement_custom_posts($value='') {
     $news,
     $member,
     $media,
+    $schedule,
     $interview,
-    $tsuneishi,
-    $miroku
+    $groupmagazine,
+    $familymagazine
   ];
   foreach ($contents_array as $key => $value) {
     add_custom($value);
@@ -236,3 +242,4 @@ function add_custom($value) {
   ));
 }
 add_action( "init", "implement_custom_posts", 0 );
+

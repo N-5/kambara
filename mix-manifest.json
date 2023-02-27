@@ -1,6 +1,19 @@
 {
     "/assets/js/app.js": "/assets/js/app.js",
     "/assets/css/app.css": "/assets/css/app.css",
+    "/assets/images/common/symbol-defs.svg": "/assets/images/common/symbol-defs.svg",
+    "/assets/images/company/company_tree.svg": "/assets/images/company/company_tree.svg",
+    "/assets/images/company/concept.svg": "/assets/images/company/concept.svg",
+    "/assets/images/company/concept_sp.svg": "/assets/images/company/concept_sp.svg",
+    "/assets/images/familytree/familytree.svg": "/assets/images/familytree/familytree.svg",
+    "/assets/images/login/login-logo.png": "/assets/images/login/login-logo.png",
     "/assets/images/login-logo.png": "/assets/images/login-logo.png",
-    "/assets/images/common/symbol-defs.svg": "/assets/images/common/symbol-defs.svg"
+    "/assets/images/member/user_thumbnail_men.svg": "/assets/images/member/user_thumbnail_men.svg",
+    "/assets/images/member/user_thumbnail_woman.svg": "/assets/images/member/user_thumbnail_woman.svg",
+    "/assets/images/top/interview_image.jpg": "/assets/images/top/interview_image.jpg",
+    "/assets/images/top/kv_1.jpg": "/assets/images/top/kv_1.jpg",
+    "/assets/images/top/kv_1_sp.jpg": "/assets/images/top/kv_1_sp.jpg",
+    "/assets/images/top/kv_2.jpg": "/assets/images/top/kv_2.jpg",
+    "/assets/images/top/kv_2_sp.jpg": "/assets/images/top/kv_2_sp.jpg",
+    "/assets/images/top/loading anime.gif": "/assets/images/top/loading anime.gif"
 }
