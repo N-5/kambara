@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div class="c-loader">
+    <div class="c-loader is-active">
 			<div id="c-loader_content"></div>
 		</div>
 
@@ -41,16 +41,31 @@
           <div class="header_gnav">
             <ul class="header_nav">
               <li class="header_nav_item js-accordion c-accordion">
-                <span class="js-accordion-parent is-active">お知らせ＋</span>
+                <span class="js-accordion-parent is-active">お知らせ</span>
                 <ul class="js-accordion-child is-active">
                   <li>
                     <a href="<?php echo home_url(); ?>/news/">
-                      ―ニュース
+                      ― ニュース
                     </a>
                   </li>
                   <li>
                     <a href="<?php echo home_url(); ?>/media/">
-                      ―メディア掲載情報
+                      ― メディア掲載情報
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header_nav_item js-accordion c-accordion">
+                <span class="js-accordion-parent is-active">ファミリー</span>
+                <ul class="js-accordion-child is-active">
+                  <li>
+                    <a href="<?php echo home_url(); ?>/news/">
+                      ― メンバー
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo home_url(); ?>/media/">
+                      ― 家系図
                     </a>
                   </li>
                 </ul>
@@ -69,13 +84,8 @@
               </li>
               <li class="header_nav_item">
                 <a href="<?php echo home_url(); ?>/interview/">
+                  みんなの<br>
                   インタビュー
-                </a>
-              </li>
-              <li class="header_nav_item">
-                <a href="<?php echo home_url(); ?>/member/">
-                  ファミリー<br>
-                  メンバー
                 </a>
               </li>
             </ul>

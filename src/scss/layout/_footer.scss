@@ -79,10 +79,6 @@
           margin-bottom: 15px;
         }
 
-        @media (--xl) {
-          font-size: 13px;
-        }
-
         a {
           @extend %hover-effect_color;
         }

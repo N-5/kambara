@@ -313,7 +313,46 @@
 
 .c-accordion {
   .js-accordion-parent {
+    position: relative;
     cursor: pointer;
+
+    &::after {
+      display: inline-block;
+      position: relative;
+      content: '';
+      font-family: $font-sans;
+      margin-left: 3px;
+      top: -4px;
+      width: 11px;
+      height: 1px;
+      background-color: $color-main;
+      transition: .24s ease;
+
+      @media (--md) {
+        margin-left: 5px;
+      }
+    }
+
+    &::before {
+      display: inline-block;
+      position: absolute;
+      content: '';
+      font-family: $font-sans;
+      margin-left: 3px;
+      top: 2px;
+      right: 5px;
+      width: 1px;
+      height: 11px;
+      background-color: $color-main;
+      transition: .24s ease;
+    }
+
+    &:not(.is-active) {
+      &::before {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+    }
   }
 
   .js-accordion-child {
@@ -322,10 +361,6 @@
 
     @media (--lg) {
       margin-top: 6px;
-    }
-
-    @media (--xl) {
-      margin-top: 4px;
     }
 
     &.is-active {

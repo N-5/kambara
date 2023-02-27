@@ -95,7 +95,7 @@ export default () => {
     ----------*/
     var setHeaderNav = function () {
       var $trigger = $('.js-gnav-trigger');
-      var $target = $('.js-gnav, .header, main');
+      var $target = $('.js-gnav, .header, main, body');
       var $item = $('.js-gnav-item');
       var classHierarichical = 'is-hierarichical';
       var classOpen = 'is-open';
@@ -293,6 +293,30 @@ export default () => {
     };
 
     /*----------
+    ロードアニメーション　仮
+    ----------*/
+    var loadAnimation = function () {
+      var $target = $('a:not(.is-outlink)')
+      $target.on('click',function(event) {
+        event.preventDefault();
+        var linkUrl = $(this).attr('href');
+        $('.c-loader').addClass('is-active');
+
+        function action() {
+          location.href = linkUrl;
+
+          // ここにリンク先への移動直後に実行する内容を記述する
+          
+        }
+        setTimeout(action, 1000);
+      });
+
+      $(window).on('load', function () {
+        $('.c-loader').removeClass('is-active');
+      });
+    }
+
+    /*----------
     実行
     ----------*/
     fixTouchDevice();
@@ -308,6 +332,7 @@ export default () => {
       // cursor();
       linkExpand();
       topVisualSlider();
+      loadAnimation();
     });
   });
 };

@@ -4,7 +4,6 @@
 
 html {
   width: 100%;
-  background-color: #f3f3f4;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -15,6 +14,8 @@ body {
   color: $color-main;
   font-family: $font-serif;
   letter-spacing: 0;
+  background-color: #f3f3f4;
+  transition: .24s ease all;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;

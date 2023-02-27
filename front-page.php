@@ -47,7 +47,7 @@
             
             <?php wp_reset_postdata(); ?>
             <?php else: ?>
-            <p>ニュースはまだ掲載されていません。</p>
+              <p>ニュースはまだ掲載されていません。</p>
             <?php endif; ?>
           </div>
 

@@ -18,7 +18,7 @@
         </div>
         
         <div class="footer_contact_mail">
-          <a href="mailto:family-info@kambara-f.com">
+          <a href="mailto:family-info@kambara-f.com" target="_blank">
             問い合わせ先  |  family-info@kambara-f.com
           </a>
         </div>
