@@ -27,10 +27,10 @@ function update_nag_hide() {
 add_action( 'admin_init', 'update_nag_hide' );
 
 //remove jquery
-function my_delete_local_jquery() {
-  wp_deregister_script('jquery');
-}
-add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
+// function my_delete_local_jquery() {
+//   wp_deregister_script('jquery');
+// }
+// add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
 
 // 管理バー(ヘッダー)の項目を非表示
 function remove_admin_bar_menu($wp_admin_bar) {
@@ -62,10 +62,10 @@ add_action('admin_head', 'my_admin_head');
 // Hide useless admin menu
 function remove_admin_menu() {
   remove_menu_page('index.php' );
-  remove_menu_page('edit.php');
+  // remove_menu_page('edit.php');
   remove_menu_page('upload.php');
   remove_menu_page('edit-comments.php');
-  // remove_menu_page('themes.php');
+  remove_menu_page('themes.php');
 }
 add_action('admin_menu', 'remove_admin_menu');
 
@@ -79,6 +79,11 @@ function remove_dashboard_widget() {
 
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widget');
+
+
+//eyecatch img
+// add_theme_support('post-thumbnails');
+// set_post_thumbnail_size(432, 520, true);
 
 
 //not auth redirect
@@ -120,23 +125,19 @@ function custom_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'custom_login_logo_url_title' );
 
-//eyecatch img
-add_theme_support('post-thumbnails');
-set_post_thumbnail_size(452, 264);
-
-register_post_type(
-  'blog',
-  array(
-  // 'supports'に'thumbnail'を追記
-    'supports' => array('title','editor','thumbnail')
-  )
-);
-
 //custom img size
-// if ( function_exists('add_image_size')) {
-//   add_image_size('custom_small', 300, 180, true);
-//   add_image_size('custom_medium', 600, 360, true);
-// }
+if ( function_exists('add_image_size')) {
+  add_image_size('interview_image', 800, 1080, true);
+  add_image_size('interview_image_2x', 1600, 2160, true);
+  add_image_size('tsuneishi_image', 520, 372, true);
+  add_image_size('tsuneishi_image_2x', 1040, 744, true);
+  add_image_size('miroku_image', 272, 372, true);
+  add_image_size('miroku_image_2x', 544, 744, true);
+  add_image_size('member_image', 270, 376, true);
+  add_image_size('member_image_2x', 540, 752, true);
+
+  // add_image_size('custom_medium', 600, 360, true);
+}
 
 // Using SVG files in Wordpress
 function add_svg_to_upload_mimes($upload_mimes) {
@@ -237,10 +238,30 @@ function implement_custom_posts_category($value) {
   );
 }
 
+//投稿をチャット投稿に変更
+function Change_menulabel() {
+	global $menu;
+	global $submenu;
+	$name = 'チャット投稿';
+	$menu[5][0] = $name;
+	$submenu['edit.php'][5][0] = $name.'一覧';
+	$submenu['edit.php'][10][0] = '新しい'.$name;
+}
+function Change_objectlabel() {
+	global $wp_post_types;
+	$name = 'チャット投稿';
+	$labels = &$wp_post_types['post']->labels;
+	$labels->name = $name;
+	$labels->singular_name = $name;
+}
+add_action( 'init', 'Change_objectlabel' );
+add_action( 'admin_menu', 'Change_menulabel' );
+
 //サイドバーメニューからカテゴリー、タグを削除（カスタム投稿とカスタムタクソノミー）
 function remove_menu() {
+    // remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=category');
     remove_submenu_page('edit.php?post_type=news', 'edit-tags.php?taxonomy=news-category&amp;post_type=news');
-    remove_submenu_page('edit.php?post_type=member', 'edit-tags.php?taxonomy=member-category&amp;post_type=member');
+    // remove_submenu_page('edit.php?post_type=member', 'edit-tags.php?taxonomy=member-category&amp;post_type=member');
     remove_submenu_page('edit.php?post_type=interview', 'edit-tags.php?taxonomy=interview-category&amp;post_type=interview');
     remove_submenu_page('edit.php?post_type=schedule', 'edit-tags.php?taxonomy=schedule-category&amp;post_type=schedule');
     remove_submenu_page('edit.php?post_type=groupmagazine', 'edit-tags.php?taxonomy=groupmagazine-category&amp;post_type=groupmagazine');
@@ -269,3 +290,16 @@ function add_custom($value) {
 }
 add_action( "init", "implement_custom_posts", 0 );
 
+
+
+//プレビューを押したときのリンク先を変更
+// add_filter( 'preview_post_link', function($link) {
+// 	global $post_type;
+//   $pdf_url = the_field('tsuneishi_pdf');
+//   $hoge = $pdf_url.'?preview=true';
+  
+// 	if($post_type == 'groupmagazine'){
+// 		$link=home_url($hoge);//preview=trueがないとpreview判定にならない
+// 	};
+// 	return $link;
+// });

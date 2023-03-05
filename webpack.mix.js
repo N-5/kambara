@@ -8,9 +8,9 @@ mix.autoload({
 });
 
 mix
-.options({
-  processCssUrls: false,
-})
+// .options({
+//   processCssUrls: false,
+// })
 .js('src/js/app.js', 'assets/js')
 .sass('src/scss/app.scss', 'assets/css')
 .copyDirectory('src/images', 'assets/images')
@@ -26,24 +26,17 @@ mix
 });
 
 mix.options({
-  cache: true,
+  cache: false,
   keepalive: true,
   processCssUrls: false,
   postCss: [
     autoprefixer,
     postcssCustomMedia,
-    cssMqpacker({
-      sort: true
-    })
+    // cssMqpacker({
+    //   sort: true
+    // })
   ],
-  clearConsole: true,
-  autoprefixer: {
-    options: {
-      browsers: [
-        '> 1%, last 8 versions, Firefox ESR, ie > 8'
-      ]
-    }
-  }
+  clearConsole: true
 });
 
 if (mix.inProduction()) {
@@ -57,10 +50,7 @@ if (mix.inProduction()) {
   });
 } else {
   mix
-    .sourceMaps()
-    .webpackConfig({
-      devtool: 'inline-source-map'
-    });
+    .sourceMaps(true, 'inline-source-map')
 }
 
 mix.disableNotifications();

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/app.css" rel="stylesheet">
     <title><?php wp_title(); ?></title>
-    <?php //get_template_part('lib/favicons'); ?>
+    <?php get_template_part('lib/favicons'); ?>
     <?php wp_head() ?>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -16,8 +16,16 @@
   </head>
 
   <body>
-    <div class="c-loader is-active">
-			<div id="c-loader_content"></div>
+    <div class="c-loader"><!-- is-loading -->
+			<div class="c-loader_content">
+        <div class="c-loader_content_loog">
+          <span>
+            <svg>
+              <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/symbol-defs.svg#logo"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
 		</div>
 
     <div id="app">
@@ -59,19 +67,19 @@
                 <span class="js-accordion-parent is-active">ファミリー</span>
                 <ul class="js-accordion-child is-active">
                   <li>
-                    <a href="<?php echo home_url(); ?>/news/">
+                    <a href="<?php echo home_url(); ?>/member/">
                       ― メンバー
                     </a>
                   </li>
                   <li>
-                    <a href="<?php echo home_url(); ?>/media/">
+                    <a href="<?php echo home_url(); ?>/family-tree/">
                       ― 家系図
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="header_nav_item">
-                <a href="<?php echo home_url(); ?>/schedule/">
+                <a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo wp_date( 'm' ); ?>/">
                   年間<br>
                   スケジュール
                 </a>
@@ -104,7 +112,94 @@
       <div class="header_menu js-gnav">
         <div class="header_menu_inner">
           <div class="header_menu_links">
-            <?php get_template_part('lib/c-links'); ?>
+            <div class="header_menu_links_wrap">
+              <ul>
+                <li class="js-accordion c-accordion">
+                  <span class="js-accordion-parent is-active">お知らせ</span>
+                  <ul class="js-accordion-child is-active">
+                    <li>
+                      <a href="<?php echo home_url(); ?>/news/">
+                        ― ニュース
+                      </a>
+                    </li>
+                    <li>
+                      <a href="<?php echo home_url(); ?>/media/">
+                        ― メディア掲載情報
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul>
+                <li class="js-accordion c-accordion">
+                  <span class="js-accordion-parent is-active">ファミリー</span>
+                  <ul class="js-accordion-child is-active">
+                    <li>
+                      <a href="<?php echo home_url(); ?>/membeer/">
+                        ― メンバー
+                      </a>
+                    </li>
+                    <li>
+                      <a href="<?php echo home_url(); ?>/family-tree/">
+                        ― 家系図
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo wp_date( 'm' ); ?>">
+                    年間スケジュール
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php echo home_url(); ?>/chat/">
+                    ファミリーチャット
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php echo home_url(); ?>/interview/">
+                    みんなのインタビュー
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header_menu_links_wrap">
+              <ul>
+                <li>
+                  <a href="<?php echo home_url(); ?>/motto/">
+                    家訓
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php echo home_url(); ?>/company/">
+                    会社情報
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php echo home_url(); ?>/interview/">
+                    会社紹介
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="<?php echo home_url(); ?>/groupmagazine/">
+                    グループ報『つねいし』
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php echo home_url(); ?>/familymagazine/">
+                    ファミリー会報誌『みろく』
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="header_menu_search">

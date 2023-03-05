@@ -1,0 +1,32 @@
+#chat {
+  .chat {
+    position: relative;
+
+    &_lead {
+      margin: 0 auto 50px;
+      padding: 30px 0;
+      border-top: 1px solid $color-border;
+      border-bottom: 1px solid $color-border;
+      font-size: 15px;
+      line-height: 3;
+    }
+
+    &_anchor {
+      width: 100%;
+      margin: 0 auto 50px;
+      padding: 30px 0;
+      border-top: 1px solid $color-border;
+      border-bottom: 1px solid $color-border;
+
+      a {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid $color-main;
+        font-size: 13px;
+      }
+    }
+  }
+}

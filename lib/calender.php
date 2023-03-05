@@ -86,13 +86,11 @@ if ( $the_query->have_posts() ) {
 	
 	while ( $the_query->have_posts() ) {
 		$the_query->the_post();
-		$url = get_the_ID(); //あとでurlに記事idぶっこみアーカイブページへリンクさせるため
+		$url = get_the_ID();
 
 		global $post, $id;
 
-		// ★ACFで設定した名前'day'を取得
 		$day_meta = (post_custom('day'));
-		// ☆'/'で数日間イベントを分割。前半が日付1、後半が日付2になる。
 		$datearray = explode('/', $day_meta);
 		
 		$startymd = explode('-', $datearray[0]);
@@ -217,7 +215,7 @@ $week .= str_repeat('<td></td>', $youbi);
 for ($day=1; $day <= $day_count; $day++, $youbi++){
 	
 	if (array_key_exists($day, $databuf)) {
-		$week .= '<td class="is-on js-expandlink"><a href=/archives/category/event?list=';
+		$week .= '<td class="is-on js-expandlink"><a href=/schedule/category/event?list=';
 		$total_event = count($databuf[$day]);
 		for ($i = 0; $i < $total_event; $i++) { 
 			$list = $databuf[$day][$i]['url'] . ','; //日別アーカイブ用

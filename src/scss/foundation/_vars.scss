@@ -5,6 +5,7 @@ $color-grey: #c0cad6;
 $color-grey-light: #f1f1f2;
 $color-main: #0C2536;
 $color-main-light: #3c5c84;
+$color-border: #c0cad6;
 
 // font-family
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lato:wght@300&display=swap');
@@ -21,6 +22,7 @@ $font-en-serif: 'EB Garamond', $font-serif, serif;
 @custom-media --md (min-width: 768px);
 @custom-media --lg (min-width: 992px);
 @custom-media --xl (min-width: 1200px);
+@custom-media --xxl (min-width: 1600px);
 
 //bp max
 @custom-media --s_max (max-width: 341px);
@@ -29,27 +31,8 @@ $font-en-serif: 'EB Garamond', $font-serif, serif;
 @custom-media --md_max (max-width: 767px);
 @custom-media --lg_max (max-width: 991px);
 @custom-media --xl_max (max-width: 1199px);
+@custom-media --xxl_max (max-width: 1599px);
 
-$breakpoints:(
-  's': 'screen and (min-width: 340px)',
-  'xs': 'screen and (min-width: 425px)',
-  'sm': 'screen and (min-width: 554px)',
-  'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 992px)',
-  'xl': 'screen and (min-width: 1200px)',
-  's_max': 'screen and (max-width: 341px)',
-  'xs_max': 'screen and (max-width: 424px)',
-  'sm_max': 'screen and (max-width: 553px)',
-  'md_max': 'screen and (max-width: 767px)',
-  'lg_max': 'screen and (max-width: 991px)',
-  'xl_max': 'screen and (max-width: 1199px)',
-) !default;
-
-@mixin media($breakpoint: sp) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
 
 //fz
 @function get_vw($size, $viewport: 640) {
@@ -61,11 +44,11 @@ $breakpoints:(
 @mixin fz($font_size: 10) {
   font-size: get_vw($font_size);
 
-  @include media(sm) {
+  @media (--sm) {
     font-size: $font_size - 2px;
   }
 
-  @include media(md) {
+  @media (--md) {
     font-size: $font_size * 1px;
   }
 }
@@ -103,7 +86,7 @@ $breakpoints:(
 %m-section-title___margin {
   margin-bottom: 30px;
 
-  @include media(lg) {
+  @media (--lg) {
     margin-bottom: 50px;
   }
 }
@@ -111,31 +94,7 @@ $breakpoints:(
 %m-block-title___margin {
   margin-bottom: 10px;
 
-  @include media(md) {
+  @media (--md) {
     margin-bottom: 20px;
-  }
-}
-
-%section___margin {
-  margin: 50px 0;
-
-  @include media(sm) {
-    margin: 80px 0;
-  }
-
-  @include media(md) {
-    margin: 100px 0;
-  }
-}
-
-%section___padding {
-  padding: 50px 0;
-
-  @include media(sm) {
-    padding: 80px 0;
-  }
-
-  @include media(lg) {
-    padding: 100px 0;
   }
 }

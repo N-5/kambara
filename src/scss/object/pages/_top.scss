@@ -1,5 +1,5 @@
 %section_layout {
-  .m-top_h2 {
+  .m-h2 {
     margin-bottom: 50px;
 
     @media (--md) {
@@ -312,6 +312,7 @@
       }
     }
 
+    .c-demoSchedule,
     .c-scheduleCalendar {
       @media (--md) {
         width: 47%;
@@ -378,6 +379,7 @@
 
           div {
             font-size: 14px;
+            letter-spacing: .06em;
 
             @media (--md) {
               font-size: 15px;
@@ -491,7 +493,7 @@
             text-align: center;
           }
 
-          .m-top_h2 {
+          .m-h2 {
             margin-top: 40px;
 
             @media (--md) {

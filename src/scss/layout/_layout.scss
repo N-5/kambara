@@ -1,7 +1,8 @@
 #app {
   position: relative;
   min-height: 100vh;
-  padding-bottom: 674px;
+  // padding-bottom: 674px;
+  padding-bottom: 740px;
   z-index: 0;
 
   @media (--md) {
@@ -9,10 +10,21 @@
   }
 
   @media (--lg) {
-    padding-bottom: 496px;
+    padding-bottom: 600px;
+  }
+}
+
+//下層ページのpt
+%underPagePadding {
+  padding-top: 120px;
+
+  @media (--md) {
+    padding-top: 150px;
   }
 
-
+  @media (--lg) {
+    padding-top: 200px;
+  }
 }
 
 main {
@@ -22,19 +34,21 @@ main {
   &.is-open {
     transform: translate(-50%, 0);
     transition: 1.2s cubic-bezier(0.42, 0, 0.24, 1.03) all;
-    transition-delay: .6s;
+    transition-delay: .2s;
   }
 
-  &:not(#top) {
-    padding-top: 120px;
+  &#interview {
+    @extend %underPagePadding;
 
-    @media (--md) {
-      padding-top: 150px;
+    .m-h2 {
+      @media (--md_max) {
+        margin-bottom: 30px;
+      }
     }
+  }
 
-    @media (--lg) {
-      padding-top: 200px;
-    }
+  &:not(#top, #interview) {
+    @extend %underPagePadding;
 
     .l-container {
       @media (--md) {
@@ -45,6 +59,7 @@ main {
 }
 
 .l-container {
+  position: relative;
   padding: 0 15px;
 
   @media (--md) {
@@ -59,12 +74,35 @@ main {
   &_side {
     @media (--md) {
       width: 15vw;
+      margin-right: 4vw;
+    }
+
+    .m-h2 {
+      margin-bottom: 36px;
+
+      @media (--md) {
+        margin-bottom: 60px;
+      }
+
+      &:nth-child(2) {
+        @media (--md) {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 
   &_content {
     @media (--md) {
       width: 85vw;
+    }
+  }
+
+  &_mgt {
+    .l-container_content {
+      @media (--lg) {
+        margin-top: 60px;
+      }
     }
   }
 }

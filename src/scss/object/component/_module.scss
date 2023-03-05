@@ -1,4 +1,4 @@
-.m-top_h2 {
+.m-h2 {
   position: relative;
   font-size: 16px;
 
@@ -18,10 +18,34 @@
   }
 }
 
+.m-h3 {
+  position: relative;
+  display: flex;
+  font-size: 15px;
+
+  @media (--md) {
+    font-size: 17px;
+  }
+
+  .en {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: $font-en-serif;
+    letter-spacing: .1em;
+    writing-mode: vertical-rl;
+  }
+
+  .jp {
+    margin-right: 15px;
+    font-family: $font-serif;
+    writing-mode: vertical-rl;
+  }
+}
+
 .m-top_readmore {
   position: relative;
   padding-bottom: 10px;
-  border-bottom: 1px solid #c0cad6;
+  border-bottom: 1px solid $color-border;
 
   @media (--md) {
     padding-bottom: 15px;
@@ -54,5 +78,14 @@
         top: 1px;
       }
     }
+  }
+}
+
+.m-text {
+  font-size: 14px;
+  line-height: 1.8;
+
+  @media (--md) {
+    font-size: 15px;
   }
 }

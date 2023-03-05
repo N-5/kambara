@@ -21,7 +21,7 @@
     <div class="l-container">
       <div class="wrapper">
         <div class="wrapper_side">
-          <h2 class="m-top_h2">
+          <h2 class="m-h2">
             <span class="en">News</span><br>
             <span class="jp">お知らせ</span>
           </h2>
@@ -47,7 +47,7 @@
             
             <?php wp_reset_postdata(); ?>
             <?php else: ?>
-              <p>ニュースはまだ掲載されていません。</p>
+              <p>お知らせはまだ掲載されていません。</p>
             <?php endif; ?>
           </div>
 
@@ -63,7 +63,7 @@
     <div class="l-container">
       <div class="wrapper">
         <div class="wrapper_side">
-          <h2 class="m-top_h2">
+          <h2 class="m-h2">
             <span class="en">Press</span><br>
             <span class="jp">メディア掲載情報</span>
           </h2>
@@ -105,40 +105,51 @@
     <div class="l-container">
       <div class="wrapper">
         <div class="wrapper_side">
-          <h2 class="m-top_h2">
+          <h2 class="m-h2">
             <span class="en">Interview</span><br>
             <span class="jp">みんなのインタビュー</span>
           </h2>
         </div>
 
         <div class="wrapper_content">
+          <?php
+						$args = array(
+							'post_type' => 'interview',
+							'posts_per_page' => 1
+						);
+						$the_query = new WP_Query($args);
+						if($the_query->have_posts()):
+						?>
+					<?php while ($the_query->have_posts()): $the_query->the_post(); ?>
           <div class="c-interview">
             <div class="c-interview_image">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/top/interview_image.jpg" alt="">
+              <?php echo wp_get_attachment_image( get_field('interview_image'), 'interview_image' ); ?>
             </div>
 
             <div class="c-interview_text">
               <div class="c-interview_number">
-                第一回
+                <?php the_title() ?>
               </div>
               <div class="c-interview_title">
-                必ず到来する変化に備え、<br>
-                人も企業も学び、変わり続けよう
+                <?php the_field('interview_title'); ?>
               </div>
               <div class="c-interview_role">
-                ○○株式会社　代表取締役社長　○○ ○○
+                <?php the_field('interview_role'); ?>
               </div>
               <div class="c-interview_sentence">
                 <p>
-                  求人サービスで躍進するビズリーチが、グループ経営体制に移行し、Visionalとして新たなスタートをきったのが、2020年2月。その後、2021年4月には、東証マザーズ(当時)へ「ユニコーン上場」を果たし、世の注目を集めた。コロナ禍をむしろ追い風とするかのように、時流を捉えて成長を続ける同社だが、代表の南氏は、「我々が志してきたのは、事業を通じて新しい時代のムーブメントをつくること」とし、「まだ緒に就いたばかり」と語る。いまもっとも勢いのあるベンチャー企業のひとつである同社が見据える、「新しい時代」とはいかなるものか。同氏に聞いた。
+                  <?php the_field('interview_text'); ?>
                 </p>
               </div>
             </div>
           </div>
 
           <div class="m-top_readmore">
-            <a href="<?php echo home_url(); ?>/interview/">Read more</a>
+            <a href="<?php the_permalink() ?>">Read more</a>
           </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -148,7 +159,7 @@
     <div class="l-container">
       <div class="wrapper">
         <div class="wrapper_side">
-          <h2 class="m-top_h2">
+          <h2 class="m-h2">
             <span class="en">Annual Schedule</span><br>
             <span class="jp">年間スケジュール</span>
           </h2>
@@ -156,34 +167,54 @@
 
         <div class="wrapper_content">
           <div class="schedule_calender">
-            <?php get_template_part('lib/calender'); ?>
+            <div class="c-scheduleCalendar_table">
+              <?php echo do_shortcode( '[eo_calendar]' ) ?>
+              <!-- eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日" columnformatweek="D n/j"]' -->
+            </div>
+              <!-- <div class="c-demoSchedule">
+                <?php echo do_shortcode( '[eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日" columnformatweek="D n/j"]' ) ?>
+              </div> -->
             
             <div class="schedule_month">
               <h4>
-                <span class="en">February 2023</span><br>
-                <span class="jp">2月</span>
+                <span class="en"><?php echo get_post_time('F'); ?> <?php echo wp_date( 'Y' ); ?></span><br>
+                <span class="jp"><?php echo wp_date( 'F' ); ?></span>
               </h4>
-
               <div class="schedule_month_archive">
-                <div class="schedule_month_archive_post">
-                  <a href="">
-                    <time>2/24</time>
-                    <div>神原誠之様命日</div>
-                  </a>
-                </div>
-
-                <div class="schedule_month_archive_post">
-                  <a href="">
-                    <time>2/24</time>
-                    <div>神原誠之様命日</div>
-                  </a>
-                </div>
+                <ul class="schedule_month_archive_post">
+                <?php
+                  $events = eo_get_events(array(
+                    'event_start_before'=>'last day of this month',
+                    'event_end_after'=>'first day of this month',
+                    'showpastevents'=>'true'
+                  ));
+                    if($events):
+                    foreach ($events as $event):
+                        // var_dump($event);
+                        $time = $event->post_modified_gmt;
+                        $time_format = date('Y-m-d',  strtotime($time));
+                        $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
+                        
+                        echo '<li class="schedule_month_archive_post">';
+                        echo '<time>'.$time_format.'</time>';
+                        echo '<div>'.$event->post_title.'</div>';
+                        echo '</li>';
+                        // printf(
+                        //     '<li><a href="%s"><time></time> %s </a></li>',
+                        //     get_permalink($event->ID),
+                        //     get_the_title($event->ID),
+                        //     eo_get_the_start( $format, $event->ID, $event->occurrence_id )
+                        // );
+                    endforeach;
+                endif;
+                ?>
+                </ul>
               </div>
             </div>
           </div>
 
           <div class="m-top_readmore">
-            <a href="<?php echo home_url(); ?>/schedule/">Read more</a>
+            <a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo wp_date( 'm' ); ?>/">Read more</a>
           </div>
         </div>
       </div>
@@ -196,7 +227,7 @@
         <div class="l-column2_item">
           <div class="companyGrid_profile js-expandlink">
             <div class="inner">
-              <h2 class="m-top_h2">
+              <h2 class="m-h2">
                 <span class="en">Company Profile</span><br>
                 <span class="jp">会社情報</span>
               </h2>
@@ -212,7 +243,7 @@
         <div class="companyGrid_family l-column2_item">
           <div class="companyGrid_chat js-expandlink">
             <div class="inner">
-              <h2 class="m-top_h2">
+              <h2 class="m-h2">
                 <span class="en">Family Chat</span><br>
                 <span class="jp">ファミリーチャット</span>
               </h2>
@@ -227,7 +258,7 @@
           <div class="l-column2">
             <div class="companyGrid_motto l-column2_item js-expandlink">
               <div class="inner">
-                <h2 class="m-top_h2">
+                <h2 class="m-h2">
                   <span class="en">Family Motto</span><br>
                   <span class="jp">家訓</span>
                 </h2>
@@ -241,12 +272,12 @@
 
             <div class="companyGrid_tree l-column2_item js-expandlink">
               <div class="inner">
-                <h2 class="m-top_h2">
+                <h2 class="m-h2">
                   <span class="en">Family Tree</span><br>
                   <span class="jp">家系図</span>
                 </h2>
                 <div class="m-top_readmore">
-                  <a href="<?php echo home_url(); ?>/chat/">
+                  <a href="<?php echo home_url(); ?>/family-tree/">
                     Read more
                   </a>
                 </div>
@@ -260,7 +291,7 @@
         <div class="l-column2">
           <div class="companyGrid_groupmagazine l-column2_item js-expandlink">
             <div class="inner">
-              <h2 class="m-top_h2">
+              <h2 class="m-h2">
                 <span class="en">Tsuneishi</span><br>
                 <span class="jp">グループ報『つねいし』</span>
               </h2>
@@ -274,7 +305,7 @@
 
           <div class="companyGrid_familymagazine l-column2_item js-expandlink">
             <div class="inner">
-              <h2 class="m-top_h2">
+              <h2 class="m-h2">
                 <span class="en">Miroku</span><br>
                 <span class="jp">ファミリー会報誌『みろく』</span>
               </h2>

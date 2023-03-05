@@ -252,7 +252,9 @@ export default () => {
       });
     }
 
-    //link expand
+    /*----------
+    リンクエリア拡張
+    ----------*/
     var linkExpand = function () {
       var $target = $('.js-expandlink');
 
@@ -261,7 +263,9 @@ export default () => {
       });
     }
 
-    //cursor()
+    /*----------
+    カーソルカスタマイズ
+    ----------*/
     var cursor = function () {
       const stalker = document.getElementById('app-stalker');
       let hovFlag = false;
@@ -293,26 +297,36 @@ export default () => {
     };
 
     /*----------
-    ロードアニメーション　仮
+    ロードアニメーション　＜仮＞気が向いたら修正
     ----------*/
     var loadAnimation = function () {
       var $target = $('a:not(.is-outlink)')
-      $target.on('click',function(event) {
+      $target.on('click', function (event) {
         event.preventDefault();
         var linkUrl = $(this).attr('href');
-        $('.c-loader').addClass('is-active');
 
-        function action() {
+        $('.c-loader').addClass('is-loading');
+
+        function beforeAction () {
           location.href = linkUrl;
-
           // ここにリンク先への移動直後に実行する内容を記述する
           
         }
-        setTimeout(action, 1000);
+        setTimeout(beforeAction, 800);
       });
 
-      $(window).on('load', function () {
-        $('.c-loader').removeClass('is-active');
+      
+
+      $(window).on('load', function (event) {
+        event.preventDefault();
+
+        setTimeout(() => {
+          afterction();
+        }, 800);
+
+        function afterction () {
+          $('.c-loader').removeClass('is-loading');
+        }
       });
     }
 
@@ -332,7 +346,7 @@ export default () => {
       // cursor();
       linkExpand();
       topVisualSlider();
-      loadAnimation();
+      // loadAnimation();
     });
   });
 };

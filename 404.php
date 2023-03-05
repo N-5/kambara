@@ -4,14 +4,14 @@
   <section class="error-notpage" data-color="dark">
     <div class="l-container">
       <div class="l-container_side">
-        <h2 class="m-top_h2">
-          <span class="en">Not found</span><br>
-          <span class="jp">サンプル</span>
+        <h2 class="m-h2">
+          <span class="en">404 Not found</span><br>
+          <span class="jp">エラー</span>
         </h2>
       </div>
 
       <div class="l-container_content">
-        <p>
+        <p class="m-text">
           大変申し訳ありませんが、<br class="u-md_max">該当ページがございません。<br>
           このページをブックマーク登録されていた方は、<br>お手数ですがブックマークの変更をお願いいたします。
         </p>

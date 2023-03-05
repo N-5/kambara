@@ -1,98 +1,108 @@
 .u-sm {
-  display: none;
+  display: none !important;
 
-  @include media(sm) {
-    display: block;
+  @media (--sm) {
+    display: block !important;
   }
 }
 
 .u-md {
-  display: none;
+  display: none !important;
 
-  @include media(md) {
-    display: block;
+  @media (--md) {
+    display: block !important;
   }
 }
 
 .u-lg {
-  display: none;
+  display: none !important;
 
-  @include media(lg) {
-    display: block;
+  @media (--lg) {
+    display: block !important;
   }
 }
 
 .u-xl {
-  display: none;
+  display: none !important;
 
-  @include media(xl) {
-    display: block;
+  @media (--xl) {
+    display: block !important;
   }
 }
 
 .u-sm_max {
-  display: none;
+  display: none !important;
 
-  @include media(sm_max) {
-    display: block;
+  @media (--sm_max) {
+    display: block !important;
   }
 }
 
 .u-md_max {
-  display: none;
+  display: none !important;
 
-  @include media(md_max) {
-    display: block;
+  @media (--md_max) {
+    display: block !important;
   }
 }
 
 .u-lg_max {
-  display: none;
+  display: none !important;
 
-  @include media(lg_max) {
-    display: block;
+  @media (--lg_max) {
+    display: block !important;
   }
 }
 
 .u-xl_max {
-  display: none;
+  display: none !important;
 
-  @include media(xl_max) {
-    display: block;
+  @media (--xl_max) {
+    display: block !important;
   }
 }
 
 p {
   &.u-es {
-    font-size: 10px;
+    font-size: 10px !important;
+    line-height: 1.8;
 
-    @include media(lg) {
-      font-size: 12px;
+    @media (--lg) {
+      font-size: 12px !important;
     }
   }
 
   &.u-s {
-    font-size: 12px;
+    font-size: 12px !important;
+    line-height: 1.8;
 
-    @include media(lg) {
-      font-size: 14px;
+    @media (--lg) {
+      font-size: 14px !important;
     }
   }
 
   &.u-m {
-    font-size: 13px;
+    font-size: 13px !important;
     line-height: 1.8;
 
-    @include media(lg) {
-      font-size: 15px;
+    @media (--lg) {
+      font-size: 15px !important;
     }
   }
 
   &.u-l {
     font-size: 16px;
+    line-height: 1.8;
   }
 
   &.u-xl {
-    font-size: 18px;
+    font-size: 18px !important;
+    line-height: 1.8;
+  }
+}
+
+@for $i from 1 through 20 {
+  .u-mg_#{$i * 5}px {
+    margin: 5px * $i;
   }
 }
