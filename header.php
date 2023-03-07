@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/app.css" rel="stylesheet">
+    <!-- <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script> -->
     <title><?php wp_title(); ?></title>
     <?php get_template_part('lib/favicons'); ?>
     <?php wp_head() ?>
@@ -31,7 +32,7 @@
     <div id="app">
       <header id="header" class="header js-floatingMenu is-view">
         <div class="header_inner">
-          <div class="header_logo">
+          <h1 class="header_logo">
             <a href="<?php echo home_url(); ?>">
               <span class="header_logo_kamon">
                 <svg>
@@ -44,7 +45,7 @@
                 </svg>
               </span>
             </a>
-          </div>
+          </h1>
 
           <div class="header_gnav">
             <ul class="header_nav">
@@ -136,7 +137,7 @@
                   <span class="js-accordion-parent is-active">ファミリー</span>
                   <ul class="js-accordion-child is-active">
                     <li>
-                      <a href="<?php echo home_url(); ?>/membeer/">
+                      <a href="<?php echo home_url(); ?>/member/">
                         ― メンバー
                       </a>
                     </li>
@@ -176,12 +177,12 @@
                   </a>
                 </li>
                 <li>
-                  <a href="<?php echo home_url(); ?>/company/">
+                  <a href="<?php echo home_url(); ?>/company-profile/">
                     会社情報
                   </a>
                 </li>
                 <li>
-                  <a href="<?php echo home_url(); ?>/interview/">
+                  <a href="<?php echo home_url(); ?>/compnay/">
                     会社紹介
                   </a>
                 </li>
@@ -203,7 +204,7 @@
           </div>
 
           <div class="header_menu_search">
-            <?php get_template_part('lib/c-searchform'); ?>
+            <?php get_template_part('lib/m-searchform'); ?>
           </div>
 
           <div class="header_menu_mail">

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import ScrollHint from 'scroll-hint'
 
 export default () => {
 
@@ -300,7 +301,7 @@ export default () => {
     ロードアニメーション　＜仮＞気が向いたら修正
     ----------*/
     var loadAnimation = function () {
-      var $target = $('a:not(.is-outlink)')
+      var $target = $('a:not(.js-outlink)')
       $target.on('click', function (event) {
         event.preventDefault();
         var linkUrl = $(this).attr('href');
@@ -330,6 +331,17 @@ export default () => {
       });
     }
 
+    var scrollHint = function () {
+      new ScrollHint('.js-scrollable', {
+        scrollHintIconAppendClass: 'scroll-hint-icon-white',
+        applyToParents: true,
+        // suggestiveShadow: true,
+        i18n: {
+          scrollable: 'スクロールできます'
+        }
+      });
+    }
+
     /*----------
     実行
     ----------*/
@@ -347,6 +359,7 @@ export default () => {
       linkExpand();
       topVisualSlider();
       // loadAnimation();
+      scrollHint();
     });
   });
 };

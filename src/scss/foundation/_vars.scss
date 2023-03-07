@@ -98,3 +98,34 @@ $font-en-serif: 'EB Garamond', $font-serif, serif;
     margin-bottom: 20px;
   }
 }
+
+%section__border {
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: $color-border;
+    top: 0;
+    left: 15px;
+
+    @media (--md) {
+      width: calc(100% - 29vw);
+      right: 50px;
+      left: initial;
+      transform: translate(0, 0);
+    }
+
+    @media (--lg) {
+      width: calc(100% - 27%);
+    }
+
+    @media (--xl) {
+      width: calc(100% - 25%);
+    }
+
+    @media (--xxl) {
+      width: calc(100% - 24%);
+    }
+  }
+}

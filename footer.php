@@ -30,7 +30,7 @@
             <span class="js-accordion-parent is-active">ファミリー</span>
             <ul class="js-accordion-child is-active">
               <li>
-                <a href="<?php echo home_url(); ?>/membeer/">
+                <a href="<?php echo home_url(); ?>/member/">
                   ― メンバー
                 </a>
               </li>
@@ -45,17 +45,17 @@
 
         <ul>
           <li>
-            <a href="<?php echo home_url(); ?>/schedule/">
+            <a href="<?php echo home_url(); ?>/motto/">
               家訓
             </a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/chat/">
+            <a href="<?php echo home_url(); ?>/company-profile/">
               会社情報
             </a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/interview/">
+            <a href="<?php echo home_url(); ?>/compnay/">
               会社紹介
             </a>
           </li>
@@ -97,7 +97,7 @@
 
       <div class="footer_contact">
         <div class="footer_contact_search">
-          <?php get_template_part('lib/c-searchform'); ?>
+          <?php get_template_part('lib/m-searchform'); ?>
         </div>
         
         <div class="footer_contact_mail">
@@ -112,6 +112,7 @@
 <!-- end #app -->
 
   <?php wp_footer(); ?>
+  <!-- <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script> -->
   <script defer type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js'></script>
 </body>
 </html>

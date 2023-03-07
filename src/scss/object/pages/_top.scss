@@ -72,6 +72,10 @@
           }
         }
 
+        &-list {
+          pointer-events: none;
+        }
+
         &-slide {
           background-color: #ccc;
           background-size: cover;

@@ -13,32 +13,32 @@
       <div class="l-container_content">
         <ul class="c-category_inteview">
           <li class="c-category_inteview_item">
-            <a href="#first" class="js-anchor">
+            <a href="#first" class="js-anchor js-outlink">
               第一世代
             </a>
           </li>
           <li class="c-category_inteview_item">
-            <a href="#second" class="js-anchor">
+            <a href="#second" class="js-anchor js-outlink">
               第二世代
             </a>
           </li>
           <li class="c-category_inteview_item">
-            <a href="#third" class="js-anchor">
+            <a href="#third" class="js-anchor js-outlink">
               第三世代
             </a>
           </li>
           <li class="c-category_inteview_item">
-            <a href="#fourth" class="js-anchor">
+            <a href="#fourth" class="js-anchor js-outlink">
               第四世代
             </a>
           </li>
           <li class="c-category_inteview_item">
-            <a href="#fourth" class="js-anchor">
+            <a href="#fourth" class="js-anchor js-outlink">
               第五世代
             </a>
           </li>
           <li class="c-category_inteview_item">
-            <a href="#deceased" class="js-anchor">
+            <a href="#deceased" class="js-anchor js-outlink">
               故人一覧
             </a>
           </li>
@@ -85,7 +85,7 @@
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
           <div class="c-member_item">
-            <a href="" target="_blank">
+            <a href="<?php the_permalink() ?>">
               <div class="c-member_image">
                 <?php 
                   $sex = get_field_object('member_sex');
@@ -139,7 +139,7 @@
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
           <div class="c-member_item">
-            <a href="" target="_blank">
+            <a href="<?php the_permalink() ?>">
               <div class="c-member_image">
                 <?php 
                   $sex = get_field_object('member_sex');
@@ -193,7 +193,7 @@
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
           <div class="c-member_item">
-            <a href="" target="_blank">
+            <a href="<?php the_permalink() ?>">
               <div class="c-member_image">
                 <?php 
                   $sex = get_field_object('member_sex');
@@ -247,7 +247,7 @@
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
           <div class="c-member_item">
-            <a href="" target="_blank">
+            <a href="<?php the_permalink() ?>">
               <div class="c-member_image">
                 <?php 
                   $sex = get_field_object('member_sex');
@@ -301,7 +301,7 @@
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
           <div class="c-member_item">
-            <a href="" target="_blank">
+            <a href="<?php the_permalink() ?>">
               <div class="c-member_image">
                 <?php 
                   $sex = get_field_object('member_sex');

@@ -181,7 +181,6 @@
                 <span class="jp"><?php echo wp_date( 'F' ); ?></span>
               </h4>
               <div class="schedule_month_archive">
-                <ul class="schedule_month_archive_post">
                 <?php
                   $events = eo_get_events(array(
                     'event_start_before'=>'last day of this month',
@@ -195,10 +194,10 @@
                         $time_format = date('Y-m-d',  strtotime($time));
                         $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
                         
-                        echo '<li class="schedule_month_archive_post">';
+                        echo '<div class="schedule_month_archive_post">';
                         echo '<time>'.$time_format.'</time>';
                         echo '<div>'.$event->post_title.'</div>';
-                        echo '</li>';
+                        echo '</div>';
                         // printf(
                         //     '<li><a href="%s"><time></time> %s </a></li>',
                         //     get_permalink($event->ID),
@@ -208,7 +207,6 @@
                     endforeach;
                 endif;
                 ?>
-                </ul>
               </div>
             </div>
           </div>

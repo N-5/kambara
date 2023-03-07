@@ -25,6 +25,12 @@ mix
   }
 });
 
+mix.webpackConfig({
+    stats: {
+        children: true,
+    },
+});
+
 mix.options({
   cache: false,
   keepalive: true,

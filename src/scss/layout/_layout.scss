@@ -37,7 +37,10 @@ main {
     transition-delay: .2s;
   }
 
-  &#interview {
+  &#interview,
+  &#company,
+  &#motto,
+  &#familytree {
     @extend %underPagePadding;
 
     .m-h2 {
@@ -47,7 +50,7 @@ main {
     }
   }
 
-  &:not(#top, #interview) {
+  &:not(#top, #interview, #company, #motto, #familytree) {
     @extend %underPagePadding;
 
     .l-container {

@@ -182,11 +182,11 @@ function implement_custom_posts($value='') {
     "name" => "メディア",
     "has_archive" => true,
   );
-  $schedule = (object) array(
-    "slug" => "schedule",
-    "name" => "年間スケジュール",
-    "has_archive" => false,
-  );
+  // $schedule = (object) array(
+  //   "slug" => "schedule",
+  //   "name" => "年間スケジュール",
+  //   "has_archive" => false,
+  // );
   $interview = (object) array(
     "slug" => "interview",
     "name" => "インタビュー",
@@ -206,7 +206,7 @@ function implement_custom_posts($value='') {
     $news,
     $member,
     $media,
-    $schedule,
+    // $schedule,
     $interview,
     $groupmagazine,
     $familymagazine

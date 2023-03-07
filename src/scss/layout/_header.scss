@@ -255,10 +255,11 @@
       @media (--md) {
         display: flex;
         padding: 200px 50px;
+        font-size: 14px;
       }
     }
 
-    .c-searchform {
+    .m-searchform {
       input {
         background-color: #d7d7d8;
       }

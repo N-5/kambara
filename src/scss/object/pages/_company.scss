@@ -1,5 +1,120 @@
 #company {
-  .company {
+  .profile {
     position: relative;
+    padding-bottom: 140px;
+
+    @media (--md) {
+      padding-bottom: 120px;
+    }
+
+    &_h3 {
+      position: relative;
+      padding-bottom: 50px;
+      text-align: center;
+      font-size: 17px;
+
+      @media (--md_max) {
+        margin-top: 80px;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        margin-top: 50px;
+        width: 30px;
+        height: 1px;
+        background-color: $color-main;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &_catch {
+      font-size: 10vw;
+      line-height: 1.5;
+      text-align: center;
+      font-size: 30px;
+
+      @media (--sm) {
+        font-size: 33px;
+      }
+
+      @media (--lg) {
+        font-size: 33px;
+      }
+    }
+  }
+
+  .chart {
+    position: relative;
+    padding-bottom: 140px;
+
+    @media (--md) {
+      padding-bottom: 50px
+    }
+    
+    .l-container {
+      padding-top: 40px;
+      @extend %section__border;
+
+      @media (--md_max) {
+        padding: 0;
+      }
+
+      @media (--md) {
+        &::before {
+          width: calc(100% - 100px);
+        }
+      }
+
+      &_side {
+        @media (--md_max) {
+          padding: 40px 15px;
+        }
+      }
+    }
+
+    .m-h2 {
+      @media (--md_max) {
+        padding: 40px 15px;
+      }
+    }
+
+    &_lead {
+      margin: 20px 0 100px;
+      text-align: center;
+      line-height: 1.6;
+      font-size: 16px;
+
+      @media (--md) {
+        margin: 100px 0 150px;
+        font-size: 19px;
+      }
+    }
+
+    &_image {
+      &_scroller {
+        position: relative;
+        overflow-x: auto;
+        width: 800px;
+        margin: 0 auto;
+        // transform: translate(-170px, 10px);
+        z-index: -1;
+
+        @media (--md) {
+          width: 100%;
+          overflow-x: visible;
+        }
+
+        img {
+          max-width: initial;
+        }
+      }
+
+      .scroll-hint-icon {
+        top: 18% !important;
+      }
+    }
   }
 }

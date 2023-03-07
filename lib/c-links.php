@@ -18,17 +18,17 @@
 
 <ul>
   <li>
-    <a href="<?php echo home_url(); ?>/schedule/">
+    <a href="<?php echo home_url(); ?>/motto/">
       家訓
     </a>
   </li>
   <li>
-    <a href="<?php echo home_url(); ?>/chat/">
+    <a href="<?php echo home_url(); ?>/company-profile/">
       会社情報
     </a>
   </li>
   <li>
-    <a href="<?php echo home_url(); ?>/interview/">
+    <a href="<?php echo home_url(); ?>/compnay/">
       会社紹介
     </a>
   </li>
@@ -39,7 +39,7 @@
     <span class="js-accordion-parent is-active">ファミリー</span>
     <ul class="js-accordion-child is-active">
       <li>
-        <a href="<?php echo home_url(); ?>/membeer/">
+        <a href="<?php echo home_url(); ?>/member/">
           ― メンバー
         </a>
       </li>

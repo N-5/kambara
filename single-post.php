@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="news">
+<main id="chat">
   <section>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
@@ -11,19 +11,47 @@
       </div>
 
       <div class="l-container_content">
-        <article>
-          <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-          <header>
-            <div class="singleNews_function">
-              <div class="singleNews_time"><time datatime="<?php the_time('Y-m-d') ?>"><?php the_time('Y.m.d') ?></time></div>
-            </div>
-            <h1 class="singleNews_title"><?php the_title() ?></h1>
-          </header>
+        <div class="c-chatlist__time"><time datatime="<?php the_time('Y-m-d') ?>"><?php the_time('Y.m.d') ?></time></div>
+          <?php
+            $posttags = get_the_tags();
+            if( $posttags ){
+              echo '<div class="c-chatlist__tag">';
+              foreach ( $posttags as $tag ) {
+                echo '<div class="c-chatlist_tag_item">#' . $tag->name . '</div>';
+              }
+              echo '</div>';
+            }
+          ?>
+          <?php
+            $categories = get_the_category();
+            if( $categories ){
+              echo '<div class="c-chatlist_category">';
+              foreach( $categories as $category ){
+                echo '<div class="c-chatlist_category_item">' . $category->name . '</div>';
+              }
+              echo '</div>';
+            }
+          ?>
+          <h1 class="c-chatlist__title"><?php the_title() ?></h1>
+          <div class="c-chatlist__image">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('index_thumbnail'); ?>
+            <?php endif; ?>
+          </div>
           <div class="c-postarea">
             <?php the_content() ?>
           </div>
-          <?php endwhile; ?>
-        </article>
+          <div class="c-chatlist__box">
+            <div class="c-chatlist__author">
+              投稿者：<?php the_author(); ?>
+            </div>
+            <div class="c-chatlist__email">
+              メールアドレス：<?php 
+                $user_id = get_post_field( 'post_author', 100 );
+                echo get_the_author_meta( 'user_email', $user_id );
+              ?>
+            </div>
+          </div>
       </div>
     </div>
   </section>
@@ -45,7 +73,7 @@
         <?php endif; ?>
         
         <div class="c-paging_home">
-          <a href="<?php echo home_url(); ?>/news/">
+          <a href="<?php echo home_url(); ?>/chat/">
             <span class="paging-heading">All</span>
           </a>
         </div>
