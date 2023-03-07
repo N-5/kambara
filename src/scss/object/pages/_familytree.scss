@@ -1,0 +1,18 @@
+#familytree {
+  .familytree {
+    &_image {
+      margin: 0 40px;
+      
+      @media (--md) {
+        margin: 60px auto 0;
+      }
+
+      img {
+        @media (--md_max) {
+          width: 1800px;
+          max-width: initial;
+        }
+      }
+    }
+  }
+}

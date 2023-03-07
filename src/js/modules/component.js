@@ -268,7 +268,7 @@ export default () => {
     カーソルカスタマイズ
     ----------*/
     var cursor = function () {
-      const stalker = document.getElementById('app-stalker');
+      const stalker = document.getElementById('js-appStalker');
       let hovFlag = false;
 
       document.addEventListener('mousemove', function (e) {
@@ -331,6 +331,9 @@ export default () => {
       });
     }
 
+    /*----------
+    SPテーブルアクセシビリティ
+    ----------*/
     var scrollHint = function () {
       new ScrollHint('.js-scrollable', {
         scrollHintIconAppendClass: 'scroll-hint-icon-white',
@@ -358,7 +361,7 @@ export default () => {
       // cursor();
       linkExpand();
       topVisualSlider();
-      // loadAnimation();
+      loadAnimation();
       scrollHint();
     });
   });

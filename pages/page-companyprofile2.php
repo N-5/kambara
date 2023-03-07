@@ -20,7 +20,7 @@ Template Name: company-profile2
     </div>
   </section>
 
-  <section id="hostory" data-color="dark">
+  <section id="history" data-color="dark">
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <div class="company_sticky">
@@ -47,37 +47,37 @@ Template Name: company-profile2
 
           <div class="company_category">
             <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="#history_a1" class="js-anchor is-outlink">
                 造　船
               </a>
             </div>
             <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="#history_a2" class="js-anchor is-outlink">
                 海　運
               </a>
             </div>
             <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="#history_a3" class="js-anchor is-outlink">
                 エネルギー
               </a>
             </div>
             <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="#history_a4" class="js-anchor is-outlink">
                 環　境
               </a>
             </div>
             <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="#history_a5" class="js-anchor is-outlink">
                 ライフ & リゾート
               </a>
             </div>
             <!-- <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="history_a6" class="js-anchor is-outlink">
                 財団・その他
               </a>
             </div>
             <div class="company_category_item">
-              <a href="" class="js-anchor is-outlink">
+              <a href="history_a7" class="js-anchor is-outlink">
                 常石グループ<br class="u-md">
                 および関連企業一覧
               </a>
@@ -86,8 +86,8 @@ Template Name: company-profile2
         </div>
       </div>
 
-      <div id="history" class="l-container_content">
-        <div class="company_contents">
+      <div class="l-container_content">
+        <div id="history_a1" class="company_contents">
           <h2 class="m-h2 u-md_max">
             <span class="en">Our History</span><br>
             <span class="jp">常石グループ沿革</span>
@@ -149,7 +149,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div class="company_contents">
+        <div id="history_a2" class="company_contents">
           <h3 class="m-section-h3">
             海運事業
           </h3>
@@ -191,7 +191,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div class="company_contents">
+        <div id="history_a3" class="company_contents">
           <h3 class="m-section-h3">
             エネルギー事業
           </h3>
@@ -215,7 +215,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div class="company_contents">
+        <div id="history_a4" class="company_contents">
           <h3 class="m-section-h3">
             環境事業
           </h3>
@@ -251,7 +251,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div class="company_contents">
+        <div id="history_a5" class="company_contents">
           <h3 class="m-section-h3">
             ライフ & リゾート事業
           </h3>
@@ -316,7 +316,7 @@ Template Name: company-profile2
     </div>
   </section>
 
-  <section id="companies" data-color="dark">
+  <section id="group" data-color="dark">
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
           <div class="company_sticky">
@@ -327,37 +327,37 @@ Template Name: company-profile2
 
             <div class="company_category">
               <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
-                  造　船
-                </a>
-              </div>
-              <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
+                <a href="#group_a1" class="js-anchor is-outlink">
                   海　運
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
+                <a href="#group_a2" class="js-anchor is-outlink">
+                  造　船
+                </a>
+              </div>
+              <div class="company_category_item">
+                <a href="#group_a3" class="js-anchor is-outlink">
                   エネルギー
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
+                <a href="#group_a4" class="js-anchor is-outlink">
                   環　境
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
+                <a href="#group_a5" class="js-anchor is-outlink">
                   ライフ & リゾート
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
+                <a href="#group_a6" class="js-anchor is-outlink">
                   財団・その他
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="" class="js-anchor is-outlink">
+                <a href="#group_a7" class="js-anchor is-outlink">
                   常石グループ<br class="u-md">
                   および関連企業一覧
                 </a>
@@ -368,12 +368,12 @@ Template Name: company-profile2
 
       <div class="l-container_content">
         <div class="company_contents">
-          <h2 class="m-h2">
+          <h2 class="m-h2 u-md_max">
             <span class="en">Our Group</span><br>
             <span class="jp">常石グループ一覧</span>
           </h2>
 
-          <div class="company_group">
+          <div id="group_a" class="company_group">
             <h3 class="m-section-h3">
               海 運
             </h3>
@@ -410,7 +410,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div class="company_group">
+          <div id="group_a2" class="company_group">
             <h3 class="m-section-h3">
               造 船
             </h3>
@@ -477,7 +477,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div class="company_group">
+          <div id="group_a3" class="company_group">
             <h3 class="m-section-h3">
               エネルギー
             </h3>
@@ -509,7 +509,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div class="company_group">
+          <div id="group_a4" class="company_group">
             <h3 class="m-section-h3">
               環 境
             </h3>
@@ -561,7 +561,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div class="company_group">
+          <div id="group_a5" class="company_group">
             <h3 class="m-section-h3">
               ライフ&リゾート
             </h3>
@@ -608,7 +608,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div class="company_group">
+          <div id="group_a6" class="company_group">
             <h3 class="m-section-h3">
               財 団
             </h3>
@@ -635,24 +635,209 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div class="company_group">
+          <div id="group_a7" class="company_group">
             <h3 class="m-section-h3">
               常石グループおよび関連企業一覧
             </h3>
 
-            <div class="company_group_link">
-              <ul>
-                <li>
-                  <a href="http://www.tsuneishi-mirai.or.jp/" target="_blank" class="is-outlink">
-                    <span>一般財団法人ツネイシみらい財団</span>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blank" class="is-nolink">
-                    <span>公益財団法人　ツネイシ財団</span>
-                  </a>
-                </li>
-              </ul>
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>海運事業</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span>神原汽船株式会社</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span>神原ロジスティクス株式会社</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>造船事業</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>エネルギー事業</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>環境事業</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>ライフ＆リゾート事業</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>農業事業</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>財 団</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>その他</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>持ち株会社</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="company_accordion js-accordion is-active">
+              <div class="company_accordion_parent js-accordion-parent is-active">
+                <span>施 設</span> 
+              </div>
+              <div class="company_accordion_child company_group_link js-accordion-child is-active">
+                <ul>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank" class="is-outlink">
+                      <span></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

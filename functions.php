@@ -192,6 +192,11 @@ function implement_custom_posts($value='') {
     "name" => "インタビュー",
     "has_archive" => true,
   );
+  $company = (object) array(
+    "slug" => "company",
+    "name" => "会社紹介一覧",
+    "has_archive" => true,
+  );
   $groupmagazine = (object) array(
     "slug" => "groupmagazine",
     "name" => "つねいし",
@@ -208,6 +213,7 @@ function implement_custom_posts($value='') {
     $media,
     // $schedule,
     $interview,
+    $company,
     $groupmagazine,
     $familymagazine
   ];

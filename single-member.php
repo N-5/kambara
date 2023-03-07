@@ -34,7 +34,7 @@
 							<dt>会社名(学校名)</dt>
 							<dd><?php the_field('member_bio'); ?></dd>
 							<dt>連絡先</dt>
-							<dd><<?php the_field('member_to'); ?>/dd>
+							<dd><?php the_field('member_to'); ?></dd>
 						</dl>
 					</div>
 				</div>

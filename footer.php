@@ -55,7 +55,7 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/compnay/">
+            <a href="<?php echo home_url(); ?>/company/">
               会社紹介
             </a>
           </li>

@@ -100,6 +100,8 @@ $font-en-serif: 'EB Garamond', $font-serif, serif;
 }
 
 %section__border {
+  position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -117,15 +119,36 @@ $font-en-serif: 'EB Garamond', $font-serif, serif;
     }
 
     @media (--lg) {
-      width: calc(100% - 27%);
+      width: calc(100% - 25.5vw);
     }
 
     @media (--xl) {
-      width: calc(100% - 25%);
+      width: calc(100% - 24.5vw);
     }
 
     @media (--xxl) {
-      width: calc(100% - 24%);
+      width: calc(100% - 382px);
+    }
+  }
+}
+
+%section__border_full {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: $color-border;
+    top: 0;
+    left: 15px;
+
+    @media (--md) {
+      width: calc(100% - 100px);
+      right: 50px;
+      left: initial;
+      transform: translate(0, 0);
     }
   }
 }

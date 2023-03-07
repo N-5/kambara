@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <div class="c-loader"><!-- is-loading -->
+    <div class="c-loader is-loading"><!-- is-loading -->
 			<div class="c-loader_content">
         <div class="c-loader_content_loog">
           <span>
@@ -182,7 +182,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="<?php echo home_url(); ?>/compnay/">
+                  <a href="<?php echo home_url(); ?>/company/">
                     会社紹介
                   </a>
                 </li>
