@@ -167,12 +167,12 @@
 
         <div class="wrapper_content">
           <div class="schedule_calender">
-            <div class="c-scheduleCalendar_table">
-              <?php echo do_shortcode( '[eo_calendar]' ) ?>
+            <div class="c-demoSchedule">
+              <?php echo do_shortcode( '[eo_fullcalendar responsive="false"]' ) ?>
               <!-- eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日" columnformatweek="D n/j"]' -->
             </div>
               <!-- <div class="c-demoSchedule">
-                <?php echo do_shortcode( '[eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日" columnformatweek="D n/j"]' ) ?>
+                <?php echo do_shortcode( '[eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日"]' ) ?>
               </div> -->
             
             <div class="schedule_month">

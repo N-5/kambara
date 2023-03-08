@@ -113,6 +113,6 @@
 
   <?php wp_footer(); ?>
   <!-- <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script> -->
-  <script defer type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js'></script>
+  <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js'></script>
 </body>
 </html>

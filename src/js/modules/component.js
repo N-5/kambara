@@ -320,7 +320,6 @@ export default () => {
 
       $(window).on('load', function (event) {
         event.preventDefault();
-
         setTimeout(() => {
           afterction();
         }, 800);
@@ -361,7 +360,7 @@ export default () => {
       // cursor();
       linkExpand();
       topVisualSlider();
-      loadAnimation();
+      // loadAnimation();
       scrollHint();
     });
   });
