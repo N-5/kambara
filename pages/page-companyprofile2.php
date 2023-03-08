@@ -25,19 +25,19 @@ Template Name: company-profile2
       <div class="l-container_side">
         <div class="company_sticky">
           <div class="company_anchor">
-            <a href="#history" class="js-anchor is-outlink">
+            <a href="#history" class="js-anchor js-outlink">
               <h2 class="m-h2">
                 <span class="en">Our History</span><br>
                 <span class="jp">常石グループ沿革</span>
               </h2>
             </a>
-            <a href="#companies" class="js-anchor is-outlink">
+            <a href="#companies" class="js-anchor js-outlink">
               <h2 class="m-h2">
                 <span class="en">Our Companies</span><br>
                 <span class="jp">常石グループの企業情報</span>
               </h2>
             </a>
-            <a href="#group" class="js-anchor is-outlink">
+            <a href="#group" class="js-anchor js-outlink">
               <h2 class="m-h2">
                 <span class="en">Our Group</span><br>
                 <span class="jp">常石グループ一覧</span>
@@ -47,37 +47,37 @@ Template Name: company-profile2
 
           <div class="company_category">
             <div class="company_category_item">
-              <a href="#history_a1" class="js-anchor is-outlink">
+              <a href="#history_a1" class="js-anchor js-outlink">
                 造　船
               </a>
             </div>
             <div class="company_category_item">
-              <a href="#history_a2" class="js-anchor is-outlink">
+              <a href="#history_a2" class="js-anchor js-outlink">
                 海　運
               </a>
             </div>
             <div class="company_category_item">
-              <a href="#history_a3" class="js-anchor is-outlink">
+              <a href="#history_a3" class="js-anchor js-outlink">
                 エネルギー
               </a>
             </div>
             <div class="company_category_item">
-              <a href="#history_a4" class="js-anchor is-outlink">
+              <a href="#history_a4" class="js-anchor js-outlink">
                 環　境
               </a>
             </div>
             <div class="company_category_item">
-              <a href="#history_a5" class="js-anchor is-outlink">
+              <a href="#history_a5" class="js-anchor js-outlink">
                 ライフ & リゾート
               </a>
             </div>
             <!-- <div class="company_category_item">
-              <a href="history_a6" class="js-anchor is-outlink">
+              <a href="history_a6" class="js-anchor js-outlink">
                 財団・その他
               </a>
             </div>
             <div class="company_category_item">
-              <a href="history_a7" class="js-anchor is-outlink">
+              <a href="history_a7" class="js-anchor js-outlink">
                 常石グループ<br class="u-md">
                 および関連企業一覧
               </a>
@@ -327,37 +327,37 @@ Template Name: company-profile2
 
             <div class="company_category">
               <div class="company_category_item">
-                <a href="#group_a1" class="js-anchor is-outlink">
+                <a href="#group_a1" class="js-anchor js-outlink">
                   海　運
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="#group_a2" class="js-anchor is-outlink">
+                <a href="#group_a2" class="js-anchor js-outlink">
                   造　船
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="#group_a3" class="js-anchor is-outlink">
+                <a href="#group_a3" class="js-anchor js-outlink">
                   エネルギー
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="#group_a4" class="js-anchor is-outlink">
+                <a href="#group_a4" class="js-anchor js-outlink">
                   環　境
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="#group_a5" class="js-anchor is-outlink">
+                <a href="#group_a5" class="js-anchor js-outlink">
                   ライフ & リゾート
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="#group_a6" class="js-anchor is-outlink">
+                <a href="#group_a6" class="js-anchor js-outlink">
                   財団・その他
                 </a>
               </div>
               <div class="company_category_item">
-                <a href="#group_a7" class="js-anchor is-outlink">
+                <a href="#group_a7" class="js-anchor js-outlink">
                   常石グループ<br class="u-md">
                   および関連企業一覧
                 </a>
@@ -373,7 +373,7 @@ Template Name: company-profile2
             <span class="jp">常石グループ一覧</span>
           </h2>
 
-          <div id="group_a" class="company_group">
+          <div id="group_a1" class="company_group">
             <h3 class="m-section-h3">
               海 運
             </h3>
@@ -387,22 +387,22 @@ Template Name: company-profile2
             <div class="company_group_link">
               <ul>
                 <li>
-                  <a href="https://www.kambara-kisen.co.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.kambara-kisen.co.jp/" target="_blank" class="js-outlink">
                     <span>神原汽船株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.kambara-kisen.cn/?lang=JP" target="_blank" class="is-outlink">
+                  <a href="https://www.kambara-kisen.cn/?lang=JP" target="_blank" class="js-outlink">
                     <span>神原汽船（中国）船務有限公司</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://kambara-logistics.com/" target="_blank" class="is-outlink">
+                  <a href="https://kambara-logistics.com/" target="_blank" class="js-outlink">
                     <span>神原ロジスティクス株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.kambara-tugmarine.com/" target="_blank" class="is-outlink">
+                  <a href="https://www.kambara-tugmarine.com/" target="_blank" class="js-outlink">
                     <span>神原タグマリンサービス株式会社</span>
                   </a>
                 </li>
@@ -424,52 +424,52 @@ Template Name: company-profile2
             <div class="company_group_link">
               <ul>
                 <li>
-                  <a href="https://www.tsuneishi.co.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi.co.jp/" target="_blank" class="js-outlink">
                     <span>常石造船株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tsuneishi-iw.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi-iw.jp/" target="_blank" class="js-outlink">
                     <span>常石鉄工株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tsuneishi-trading.co.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi-trading.co.jp/" target="_blank" class="js-outlink">
                     <span>常石商事株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://tsune-e.com/" target="_blank" class="is-outlink">
+                  <a href="https://tsune-e.com/" target="_blank" class="js-outlink">
                     <span>常石エンジニアリング株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.mihoshipyard.com/" target="_blank" class="is-outlink">
+                  <a href="https://www.mihoshipyard.com/" target="_blank" class="js-outlink">
                     <span>株式会社三保造船所</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://tsuneishi-fc.com/" target="_blank" class="is-outlink">
+                  <a href="https://tsuneishi-fc.com/" target="_blank" class="js-outlink">
                     <span>ツネイシクラフト＆ファシリティーズ株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://kandadock.com/" target="_blank" class="is-outlink">
+                  <a href="https://kandadock.com/" target="_blank" class="js-outlink">
                     <span>神田ドック株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tsuneishi.co.jp/mes-s/" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi.co.jp/mes-s/" target="_blank" class="js-outlink">
                     <span>三井E&S造船株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tsuneishi.co.jp/nsr/" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi.co.jp/nsr/" target="_blank" class="js-outlink">
                     <span>新潟造船株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.yuradock.co.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.yuradock.co.jp/" target="_blank" class="js-outlink">
                     <span>由良ドック株式会社</span>
                   </a>
                 </li>
@@ -491,17 +491,17 @@ Template Name: company-profile2
             <div class="company_group_link">
               <ul>
                 <li>
-                  <a href="https://www.tsuneishi-cv.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi-cv.jp/" target="_blank" class="js-outlink">
                     <span>ツネイシCバリューズ株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tsuneishi-cv.jp/foreign/philippine.html" target="_blank" class="is-outlink">
+                  <a href="https://www.tsuneishi-cv.jp/foreign/philippine.html" target="_blank" class="js-outlink">
                     <span>TSUNEISHI C VALUES PHILIPPINES, INC.</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://tsuneishi-ge.com/" target="_blank" class="is-outlink">
+                  <a href="https://tsuneishi-ge.com/" target="_blank" class="js-outlink">
                     <span>ツネイシグリーンエナジー株式会社</span>
                   </a>
                 </li>
@@ -523,27 +523,27 @@ Template Name: company-profile2
             <div class="company_group_link">
               <ul>
                 <li>
-                  <a href="http://www.kamtecs.co.jp/" target="_blank" class="is-outlink">
+                  <a href="http://www.kamtecs.co.jp/" target="_blank" class="js-outlink">
                     <span>ツネイシカムテックス株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://tokosyoji.com/" target="_blank" class="is-outlink">
+                  <a href="https://tokosyoji.com/" target="_blank" class="js-outlink">
                     <span>東広商事株式会社</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.s-c-p.co.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.s-c-p.co.jp/" target="_blank" class="js-outlink">
                     <span>株式会社サニー・クリエーション・プランニング</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://www.earthcreate.com/" target="_blank" class="is-outlink">
+                  <a href="http://www.earthcreate.com/" target="_blank" class="js-outlink">
                     <span>株式会社アースクリエイト</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.futaba-sankyo.co.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.futaba-sankyo.co.jp/" target="_blank" class="js-outlink">
                     <span>双葉三共株式会社</span>
                   </a>
                 </li>
@@ -553,7 +553,7 @@ Template Name: company-profile2
                   </a>
                 </li>
                 <li>
-                  <a href="http://www.kamtecs-rikuun.co.jp/" target="_blank" class="is-outlink">
+                  <a href="http://www.kamtecs-rikuun.co.jp/" target="_blank" class="js-outlink">
                     <span>ツネイシカムテックス陸運株式会社</span>
                   </a>
                 </li>
@@ -575,32 +575,32 @@ Template Name: company-profile2
             <div class="company_group_link">
               <ul>
                 <li>
-                  <a href="https://www.mirokunosato.com/" target="_blank" class="is-outlink">
+                  <a href="https://www.mirokunosato.com/" target="_blank" class="js-outlink">
                     <span>みろくの里</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.bella-vista.jp/" target="_blank" class="is-outlink">
+                  <a href="https://www.bella-vista.jp/" target="_blank" class="js-outlink">
                     <span>ベラビスタ スパ＆マリーナ尾道</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://onomichi-u2.com/" target="_blank" class="is-outlink">
+                  <a href="https://onomichi-u2.com/" target="_blank" class="js-outlink">
                     <span>ONOMICHI U2</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://l-og.jp/" target="_blank" class="is-outlink">
+                  <a href="https://l-og.jp/" target="_blank" class="js-outlink">
                     <span>LOG</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://minatonoyado.jp/" target="_blank" class="is-outlink">
+                  <a href="https://minatonoyado.jp/" target="_blank" class="js-outlink">
                     <span>せとうち 湊のやど</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://guntu.jp/" target="_blank" class="is-outlink">
+                  <a href="https://guntu.jp/" target="_blank" class="js-outlink">
                     <span>guntû</span>
                   </a>
                 </li>
@@ -622,7 +622,7 @@ Template Name: company-profile2
             <div class="company_group_link">
               <ul>
                 <li>
-                  <a href="http://www.tsuneishi-mirai.or.jp/" target="_blank" class="is-outlink">
+                  <a href="http://www.tsuneishi-mirai.or.jp/" target="_blank" class="js-outlink">
                     <span>一般財団法人ツネイシみらい財団</span>
                   </a>
                 </li>
@@ -647,77 +647,77 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神原汽船株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神原ロジスティクス株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神原タグマリンサービス株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社山下回漕店</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>備後商船株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神原マリン株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神原汽船（中国）船務有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>上海神原国際貨運代理有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石（舟山）工程服務有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>KAMBARA KISEN SINGAPORE Pte. Ltd.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>Union Marine Management Services Pte. Ltd.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>KMNL LODESTAR SHIPPING B.V.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>Glocal Maritime Limited.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>CEBU ASIATIC SHIPPING & PORT SERVICES, INC.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>CASPI SHIPPING & TRANSPORT SERVICES, INC.</span>
                     </a>
                   </li>
@@ -732,127 +732,127 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石造船株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石鉄工株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石商事株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石エンジニアリング株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシクラフト & ファシリティーズ株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神田ドック株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>三井 E&S 造船株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>新潟造船株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>由良ドック株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社ティエフシー</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石集団（舟山）造船有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石（舟山）鉄工有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石（岱山）船舶服務有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石（上海）船舶設計有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>常石（上海）船舶設計有限公司 秀山分公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNEISHI HEAVY INDUSTRIES （CEBU）, Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNETETSU（CEBU）INC.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>K&A METAL INDUSTRIES, Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ASIAN CRAFT（CEBU）, INC.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNEISHI ACCOMMODATION CEBU, Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ASTILLERO TSUNEISHI PARAGUAY S.A.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNEISHI PARAGUAY IRON WORKS S.R.L.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社三保造船所</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>GRT（CEBU）CORPORATION</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>全州貿易（上海）有限公司</span>
                     </a>
                   </li>
@@ -867,17 +867,17 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシ C バリューズ株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNEISHI C VALUES PHILIPPINES, Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシグリーンエナジー株式会社</span>
                     </a>
                   </li>
@@ -892,57 +892,57 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシカムテックス株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社アースクリエイト</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシカムテックス陸運株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社サニー・クリエーション・プランニング</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>双葉三共株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>東広商事株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社山陽通商</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>上杉技建工業株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社ヨシダ</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNEISHI KAMTECS (THAILAND) Co., Ltd.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>Cycle Trend Industries Sdn.Bhd</span>
                     </a>
                   </li>
@@ -957,32 +957,32 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社せとうちクルーズ</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシ LR 株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神石高原リゾート株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>GLO-CAL CEBU Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>岱山秀嶺貿易有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>舟山秀山環亜経貿有限公司</span>
                     </a>
                   </li>
@@ -997,27 +997,27 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>Glocal Enterprises Philippines Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>GL South America S.A.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>岱山常石農業発展有限公司</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社天心山ファーム</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TENSHINZAN（PHILIPPINES）, INC.</span>
                     </a>
                   </li>
@@ -1032,37 +1032,37 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>一般財団法人神原育英会</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>一般財団法人ツネイシみらい財団</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>Tsuneishi Foundation（Cebu）, Inc.</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>PARAGUAY KAMBARA IKUEIKAI（パラグアイ神原育英会）</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>パラグアイ神原基金</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>公益財団法人 ツネイシ財団</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>WEST CEBU FOUNDATION, Inc.</span>
                     </a>
                   </li>
@@ -1077,22 +1077,22 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシチャレンジド株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>臨済宗建仁寺派 天心山 神勝寺</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>光信寺</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>特定非営利活動法人ツネイシ・スポーツアクト</span>
                     </a>
                   </li>
@@ -1107,17 +1107,17 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ツネイシホールディングス株式会社</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>株式会社グローカルジャパン</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>TSUNEISHI HOLDINGS (CEBU), INC.</span>
                     </a>
                   </li>
@@ -1132,52 +1132,52 @@ Template Name: company-profile2
               <div class="company_accordion_child company_group_link js-accordion-child is-active">
                 <ul>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>みろくの里</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神勝寺 禅と庭のミュージアム</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ベラビスタ スパ＆マリーナ 尾道</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ベラビスタマリーナ</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>ONOMICHI U2</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>LOG</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>せとうち 湊のやど</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>光信寺の湯ゆっくら</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>神石高原カントリークラブ</span>
                     </a>
                   </li>
                   <li>
-                    <a href="" target="_blank" class="is-outlink">
+                    <a href="" target="_blank" class="js-outlink">
                       <span>シーパーク大浜</span>
                     </a>
                   </li>

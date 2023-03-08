@@ -5,13 +5,14 @@
 	$month_jp = eo_get_event_archive_date( 'F' );
 	$month = rtrim($month_jp, '月');
 	$next_month = eo_get_event_archive_date( 'm' );
-	$shortcode = '[eo_fullcalendar titleformatweek="Y年Mj日" defaultView="month" month="'.$month.'"]';
-
-	function monthFunc ($month) {
-		switch ($month) {
+	$shortcode = '[eo_fullcalendar titleformatweek="Y年Mj日" responsive="false" defaultView="month" month="'.$month.'"]';
+	$year = wp_date( 'Y' );
+	
+	switch ($month) {
 		case '1':
 			$monthNext = '02';
 			$monthPrev = '12';
+			$year = $year - 1;
 			break;
 		case '2':
 			$monthNext = '03';
@@ -56,17 +57,12 @@
 		case '12':
 			$monthNext = '01';
 			$monthPrev = '11';
+			$year = $year + 1;
 			break;
 		default:
 			$monthNext = wp_date( 'm' );
 			$monthPrev = wp_date( 'm' );
 		}
-		return $monthPrev;
-	}
-
-	monthFunc($month);
-	echo $monthNext;
-	echo $monthPrev;
 ?>
 
 <main id="schedule">
@@ -91,8 +87,8 @@
 
 				<div>
 					<div>
-						<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo $monthNext ?>/">前の月</a>
-						<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo $monthPrev ?>/">次の月</a>
+						<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo $year ?>/<?php echo $monthPrev ?>/">前の月</a>
+						<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo $year ?>/<?php echo $monthNext ?>/">次の月</a>
 					</div>
 				</div>
 

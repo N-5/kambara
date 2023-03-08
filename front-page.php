@@ -169,7 +169,6 @@
           <div class="schedule_calender">
             <div class="c-demoSchedule">
               <?php echo do_shortcode( '[eo_fullcalendar responsive="false"]' ) ?>
-              <!-- eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日" columnformatweek="D n/j"]' -->
             </div>
               <!-- <div class="c-demoSchedule">
                 <?php echo do_shortcode( '[eo_fullcalendar defaultView="month" titleformatweek="Y年Mj日"]' ) ?>

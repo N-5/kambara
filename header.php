@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/app.css" rel="stylesheet">
-    <!-- <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script> -->
+    <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script>
     <title><?php wp_title(); ?></title>
     <?php get_template_part('lib/favicons'); ?>
     <?php wp_head() ?>
@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <div class="c-loader is-loading"><!-- is-loading -->
+    <div class="c-loader"><!-- is-loading -->
 			<div class="c-loader_content">
         <div class="c-loader_content_loog">
           <span>
