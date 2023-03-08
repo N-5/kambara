@@ -4,3 +4,6 @@ node_modules/
 movefile.yml
 .ssh
 .bash_history
+mix-manifest.json
+assets/css/app.css
+assets/js/app.js
