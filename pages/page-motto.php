@@ -7,7 +7,7 @@ Template Name: motto
 <?php get_header(); ?>
 
 <main id="motto">
-  <section class="motto" data-color="dark">
+  <section class="motto" data-color="dark" data-fade>
     <div class="l-container">
       <h2 class="m-h2">
         <span class="en">Family Motto</span><br>
@@ -22,12 +22,12 @@ Template Name: motto
 
   <section class="index" data-color="dark">
     <div class="l-container">
-      <h2 class="m-h2">
+      <h2 class="m-h2" data-fade>
         <span class="en">Contents</span><br>
         <span class="jp">目次</span>
       </h2>
 
-      <div class="index_anchor">
+      <div class="index_anchor" data-fade>
         <ul>
           <li>
             <a href="#motto4" class="js-anchor js-outlink">
@@ -52,28 +52,28 @@ Template Name: motto
         </ul>
       </div>
 
-      <div id="motto1" class="index_content">
+      <div id="motto1" class="index_content" data-fade>
         <picture>
           <source media="(max-width:769px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_1_sp.svg">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_1.svg" alt="">
         <picture>
       </div>
 
-      <div id="motto2" class="index_content">
+      <div id="motto2" class="index_content" data-fade>
         <picture>
           <source media="(max-width:769px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_2_sp.svg">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_2.svg" alt="">
         <picture>
       </div>
 
-      <div id="motto3" class="index_content">
+      <div id="motto3" class="index_content" data-fade>
         <picture>
           <source media="(max-width:769px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_3_sp.svg">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_3.svg" alt="">
         <picture>
       </div>
 
-      <div id="motto4" class="index_content">
+      <div id="motto4" class="index_content" data-fade>
         <picture>
           <source media="(max-width:769px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_4_sp.svg">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/motto/motto_4.svg" alt="">
@@ -82,7 +82,7 @@ Template Name: motto
     </div>
   </section>
 
-  <div class="l-container">
+  <div class="l-container" data-fade>
     <div class="c-backlink">
       <a href="<?php echo home_url(); ?>">
         Back

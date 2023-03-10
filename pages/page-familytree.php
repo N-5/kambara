@@ -7,7 +7,7 @@ Template Name: family-Tree
 <?php get_header(); ?>
 
 <main id="familytree">
-  <section class="familytree" data-color="dark">
+  <section class="familytree" data-color="dark" data-fade>
     <div class="l-container">
       <h2 class="m-h2">
         <span class="en">Family Tree</span><br>

@@ -86,6 +86,14 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widget');
 // set_post_thumbnail_size(432, 520, true);
 
 
+//チャット投稿用のアーカイブ
+function my_archives_link($link_html){
+$link_html = preg_replace('@<li>@i', '<li class="cat-item">', $link_html);
+  return $link_html;
+}
+add_filter('get_archives_link', 'my_archives_link');
+
+
 //not auth redirect
 function my_require_login() {
   global $pagenow;
@@ -135,6 +143,8 @@ if ( function_exists('add_image_size')) {
   add_image_size('miroku_image_2x', 544, 744, true);
   add_image_size('member_image', 270, 376, true);
   add_image_size('member_image_2x', 540, 752, true);
+  add_image_size('member_thumb_image', 250, 250, true);
+  add_image_size('member_thumb_image_2x', 500, 500, true);
 
   // add_image_size('custom_medium', 600, 360, true);
 }
@@ -152,7 +162,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 
 //管理画面フッター表示カスタム
 function custom_admin_footer() {
-    echo '不具合・ご相談がありましたら <a href="mailto:yfe63590@gmail.com">お問い合わせ</a>（担当中井まで）';
+    echo '不具合・ご相談がありましたら <a href="mailto:yfe63590@gmail.com">お問い合わせ</a>（担当：中井まで）';
 }
 add_filter('admin_footer_text', 'custom_admin_footer');
 
@@ -272,6 +282,7 @@ function remove_menu() {
     remove_submenu_page('edit.php?post_type=schedule', 'edit-tags.php?taxonomy=schedule-category&amp;post_type=schedule');
     remove_submenu_page('edit.php?post_type=groupmagazine', 'edit-tags.php?taxonomy=groupmagazine-category&amp;post_type=groupmagazine');
     remove_submenu_page('edit.php?post_type=familymagazine', 'edit-tags.php?taxonomy=familymagazine-category&amp;post_type=familymagazine');
+    remove_submenu_page('edit.php?post_type=event', 'edit.php?post_type=event&page=venues');
 }
 add_action('admin_menu', 'remove_menu');
 

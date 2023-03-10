@@ -95,6 +95,14 @@
         a {
           @extend %hover-effect_color;
         }
+
+        .js-accordion-child {
+          li {
+            @media (--sm_max) {
+              font-size: 12px;
+            }
+          }
+        }
       }
     }
   }

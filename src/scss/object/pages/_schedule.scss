@@ -1,5 +1,48 @@
 #schedule {
   .schedule {
     position: relative;
+
+    &_pager {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0;
+
+      a {
+        display: block;
+        font-size: 13px;
+
+        @media (--md) {
+          font-size: 15px;
+        }
+
+        &:first-child {
+          margin-right: 20px;
+          border-right: 1px solid $color-main;
+          padding-right: 20px;
+        }
+      }
+    }
+
+    &_postarea {
+      &_item {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $color-border;
+      }
+
+      &_date {
+        font-family: $font-en-sans;
+      }
+
+      &_title {
+        margin: 15px 0 30px;
+        font-family: $font-sans;
+        font-size: 20px;
+
+        @media (--md) {
+          font-size: 22px;
+        }
+      }
+    }
   }
 }

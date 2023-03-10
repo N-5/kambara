@@ -7,7 +7,7 @@ Template Name: sample
 <?php get_header(); ?>
 
 <main id="sample">
-  <section data-color="dark">
+  <section data-color="dark" data-fade>
     <div class="l-container">
       <div class="l-container_side">
         <h2 class="m-h2">

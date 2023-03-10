@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/app.css" rel="stylesheet">
-    <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script>
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/app.css<?php echo '?ver=' . filemtime( get_stylesheet_directory() . '/assets/css/app.css'); ?>" rel="stylesheet">
+    <!-- <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/splash.js'></script> -->
     <title><?php wp_title(); ?></title>
     <?php get_template_part('lib/favicons'); ?>
     <?php wp_head() ?>
@@ -17,14 +17,29 @@
   </head>
 
   <body>
-    <div class="c-loader"><!-- is-loading -->
-			<div class="c-loader_content">
-        <div class="c-loader_content_loog">
-          <span>
-            <svg>
-              <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/symbol-defs.svg#logo"></use>
-            </svg>
-          </span>
+    <!-- <div class="c-loader <?php if ( !is_home() && !is_front_page() ) : ?>is-onloading<?php endif; ?>"> -->
+    <div class="c-loader is-onloading"><!-- is-onloading -->
+			<div class="c-loader__in">
+        <div class="c-loader_content">
+          <div class="c-loader_content_logo">
+            <span>
+              <svg>
+                <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/symbol-defs.svg#logo"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-loader__out">
+        <div class="c-loader_content">
+          <div class="c-loader_content_logo">
+            <span>
+              <svg>
+                <use xlink:href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/common/symbol-defs.svg#logo"></use>
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
 		</div>

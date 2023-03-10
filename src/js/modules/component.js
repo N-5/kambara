@@ -30,6 +30,10 @@ export default () => {
 
           _$this.toggleClass('is-active');
           $child.toggleClass('is-active');
+
+          if (_$this.parent().hasClass('js-accordion_toggle')) {
+            $child.slideToggle(300);
+          }
           // $child.slideToggle(300);
         });
       });
@@ -254,13 +258,27 @@ export default () => {
     }
 
     /*----------
-    リンクエリア拡張
+    リンク
     ----------*/
-    var linkExpand = function () {
+    var linkFunc = function () {
       var $target = $('.js-expandlink');
 
       $target.on('click', function () {
         window.location = $(this).find('a').attr('href');
+      });
+
+      $('a').each(function () {
+        let href = $(this).attr('href');
+        let $target = $(this).attr('target');
+
+        let link = href.match(/^https?:\/\//);
+        if (link == null) return;
+        if (typeof $target === 'undefined' || $target === false) return;
+        if (href.indexOf(location.host) != -1) return;
+
+        $(this).attr('target', '_blank');
+        $(this).attr('rel', 'noreferrer noopener');
+        $(this).addClass('js-outlink');
       });
     }
 
@@ -268,7 +286,7 @@ export default () => {
     カーソルカスタマイズ
     ----------*/
     var cursor = function () {
-      const stalker = document.getElementById('js-appStalker');
+      const stalker = document.getElementById('js-stalker');
       let hovFlag = false;
 
       document.addEventListener('mousemove', function (e) {
@@ -278,57 +296,23 @@ export default () => {
       });
 
       //対象外
-      const linkElem = document.querySelectorAll('a:not(.no_stick_)');
+      const linkElem = document.querySelectorAll('a:not(.no_stick_), a[href^=http]:not([target="_blank"])');
 
       for (let i = 0; i < linkElem.length; i++) {
         linkElem[i].addEventListener('mouseover', function (e) {
-          hovFlag = true;
+          // hovFlag = true;
           stalker.classList.add('hov_');
-          let rect = e.target.getBoundingClientRect();
-          let posX = rect.left + (rect.width / 2);
-          let posY = rect.top + (rect.height / 2);
-
-          stalker.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
+          // let rect = e.target.getBoundingClientRect();
+          // let posX = rect.left + (rect.width / 2);
+          // let posY = rect.top + (rect.height / 2);
+          // stalker.style.transform = 'translate(' + posX + 'px, ' + posY + 'px)';
         });
         linkElem[i].addEventListener('mouseout', function (e) {
-          hovFlag = false;
+          // hovFlag = false;
           stalker.classList.remove('hov_');
         });
       }
     };
-
-    /*----------
-    ロードアニメーション　＜仮＞気が向いたら修正
-    ----------*/
-    var loadAnimation = function () {
-      var $target = $('a:not(.js-outlink)')
-      $target.on('click', function (event) {
-        event.preventDefault();
-        var linkUrl = $(this).attr('href');
-
-        $('.c-loader').addClass('is-loading');
-
-        function beforeAction () {
-          location.href = linkUrl;
-          // ここにリンク先への移動直後に実行する内容を記述する
-          
-        }
-        setTimeout(beforeAction, 800);
-      });
-
-      
-
-      $(window).on('load', function (event) {
-        event.preventDefault();
-        setTimeout(() => {
-          afterction();
-        }, 800);
-
-        function afterction () {
-          $('.c-loader').removeClass('is-loading');
-        }
-      });
-    }
 
     /*----------
     SPテーブルアクセシビリティ
@@ -358,9 +342,8 @@ export default () => {
       switchLogo();
       switchTheme();
       // cursor();
-      linkExpand();
+      linkFunc();
       topVisualSlider();
-      // loadAnimation();
       scrollHint();
     });
   });

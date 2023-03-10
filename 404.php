@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="error">
-  <section class="error-notpage" data-color="dark">
+  <section class="error-notpage" data-color="dark" data-inview>
     <div class="l-container">
       <div class="l-container_side">
         <h2 class="m-h2">

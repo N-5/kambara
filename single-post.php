@@ -1,16 +1,16 @@
 <?php get_header(); ?>
 
-<main id="chat">
-  <section>
+<main id="chat" data-color="dark">
+  <section data-color="dark">
     <div class="l-container l-container_mgt">
-      <div class="l-container_side">
+      <div class="l-container_side" data-fade>
         <h2 class="m-h2">
           <span class="en">Family Chat</span><br>
           <span class="jp">ファミリーチャット</span>
         </h2>
       </div>
 
-      <div class="l-container_content">
+      <div class="l-container_content" data-fade>
         <div class="c-chatlist__time"><time datatime="<?php the_time('Y-m-d') ?>"><?php the_time('Y.m.d') ?></time></div>
           <?php
             $posttags = get_the_tags();
@@ -43,7 +43,7 @@
           </div>
           <div class="c-chatlist__box">
             <div class="c-chatlist__author">
-              投稿者：<?php the_author(); ?>
+              投稿：<?php the_author(); ?>
             </div>
             <div class="c-chatlist__email">
               メールアドレス：<?php 
@@ -61,7 +61,7 @@
     $next_post = get_next_post();
     if( $prev_post || $next_post ):
   ?>
-  <div class="l-container">
+  <div class="l-container" data-fade>
     <div class="c-paging">
       <div class="c-paging_inner">
         <?php if( $prev_post ): ?>

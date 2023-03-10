@@ -3,7 +3,7 @@
 <main id="media">
   <section data-color="dark">
     <div class="l-container">
-      <div class="l-container_side">
+      <div class="l-container_side" data-fade>
         <h2 class="m-h2">
           <span class="en">Media</span><br>
           <span class="jp">メディア掲載情報</span>
@@ -11,7 +11,7 @@
       </div>
     </div>
     
-    <div class="l-container l-container_mgt">
+    <div class="l-container l-container_mgt" data-fade>
       <div class="l-container_side">
         <h2 class="m-h2 u-md">
           <span class="en">Category</span><br>
@@ -34,8 +34,11 @@
 
       <div class="l-container_content">
         <div class="c-newslist c-newslist_archive">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="c-newslist_item">
+          <?php 
+            if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+            $count++;
+          ?>
+          <div class="c-newslist_item" data-fade data-fade-delay="<?php echo($count); ?>">
             <a href="<?php the_permalink() ?>">
               <time class="c-newslist_time" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y.m.d') ?></time>
               <div class="c-newslist_category">
@@ -55,13 +58,13 @@
               <div class="c-newslist_title"><?php the_title() ?></div>
             </a>
           </div>
-        <?php endwhile; ?>
-        <?php else: ?>
-        <p>メディアはまだ掲載されていません。</p>
-        <?php endif; ?>
-      </div>
+          <?php endwhile; ?>
+          <?php else: ?>
+          <p>メディアはまだ掲載されていません。</p>
+          <?php endif; ?>
+          </div>
 
-        <div class="c-pagination">
+        <div class="c-pagination" data-fade>
           <div class="c-pagination-outer">
             <div class="c-pagination-inner">
               <?php global $wp_rewrite;
@@ -88,7 +91,7 @@
           </div>
         </div>
 
-        <div class="u-md_max">
+        <div class="u-md_max" data-fade>
           <h2 class="m-h2">
             <span class="en">Category</span><br>
             <span class="jp">カテゴリー</span>

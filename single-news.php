@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="news">
-  <section>
+  <section data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h2">
@@ -33,7 +33,7 @@
     $next_post = get_next_post();
     if( $prev_post || $next_post ):
   ?>
-  <div class="l-container">
+  <div class="l-container" data-fade>
     <div class="c-paging">
       <div class="c-paging_inner">
         <?php if( $prev_post ): ?>

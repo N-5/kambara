@@ -3,7 +3,7 @@
 <main id="search">
   <section data-color="dark">
     <div class="l-container l-container_mgt">
-      <div class="l-container_side">
+      <div class="l-container_side" data-fade>
         <h2 class="m-h2">
           <span class="en">Search</span><br>
           <span class="jp">検索結果</span>
@@ -22,8 +22,11 @@
         ?>
         </div>
         <div class="c-searchformResult">
-        <?php while(have_posts()): the_post(); ?>
-        <div class="c-searchformResult_item">
+        <?php 
+          while(have_posts()): the_post();
+          $count++;
+        ?>
+        <div class="c-searchformResult_item" data-fade data-fade-delay="<?php echo($count); ?>">
           <a href="<?php the_permalink(); ?>">
               <div class="c-searchformResult_post">
                 <?php
@@ -45,6 +48,20 @@
                   }
                 ?>
               </div>
+              <?php if(!empty($post->post_content)): ?>
+              <div class="c-searchformResult_content" data-fade>
+                <div class="c-postarea">
+                  <?php
+                  if(mb_strlen($post->post_content,'UTF-8')>200){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 200,'UTF-8'));
+                    echo $content.'……';
+                  }else{
+                    echo str_replace('\n', '', strip_tags($post->post_content));
+                  }
+                  ?>
+                </div>
+              </div>
+            <?php endif; ?>
           </a>
         </div>
         <?php endwhile; ?>

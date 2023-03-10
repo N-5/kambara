@@ -14,6 +14,35 @@
   }
 }
 
+[data-fade] {
+  opacity: 0;
+
+  &.js-fadein {
+    animation-duration: 1s;
+    animation-delay: .4s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+  }
+}
+
+@for $i from 1 through 30 {
+  [data-fade-delay="#{$i}"] {
+    animation-delay: .3s * $i !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 //下層ページのpt
 %underPagePadding {
   padding-top: 120px;
@@ -35,6 +64,14 @@ main {
     transform: translate(-50%, 0);
     transition: 1.2s cubic-bezier(0.42, 0, 0.24, 1.03) all;
     transition-delay: .2s;
+  }
+
+  &.is-loading {
+    transform: translate(0, -30px);
+    opacity: 0;
+    filter: blur(2px);
+    transition: .6s cubic-bezier(0.42, 0, 0.24, 1.03) all;
+    transition-delay: 0s;
   }
 
   &#interview,

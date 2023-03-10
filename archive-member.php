@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="member">
-  <section>
+  <section data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h2">
@@ -32,11 +32,11 @@
               第四世代
             </a>
           </li>
-          <li class="c-category_inteview_item">
+          <!-- <li class="c-category_inteview_item">
             <a href="#fourth" class="js-anchor js-outlink">
               第五世代
             </a>
-          </li>
+          </li> -->
           <li class="c-category_inteview_item">
             <a href="#deceased" class="js-anchor js-outlink">
               故人一覧
@@ -57,7 +57,7 @@
     </div>
   </section>
 
-  <section id="first" class="member_section">
+  <section id="first" class="member_section" data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h3">
@@ -91,10 +91,12 @@
                   $sex = get_field_object('member_sex');
                   $value = $sex['value'];
                   $ptnAbs = get_field('member_pattern'); 
-                  if($value == 'men'):
+                  if( wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ) ):
                 ?>
+                <?php echo wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ); ?>
+              <?php elseif($value == 'men'): ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_men.svg" alt="男性">
-              <?php else: ?>
+              <?php else : ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_woman.svg" alt="女性">
               <?php endif; ?>
               </div>
@@ -111,7 +113,7 @@
     </div>
   </section>
 
-  <section id="second" class="member_section">
+  <section id="second" class="member_section" data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h3">
@@ -145,10 +147,12 @@
                   $sex = get_field_object('member_sex');
                   $value = $sex['value'];
                   $ptnAbs = get_field('member_pattern'); 
-                  if($value == 'men'):
+                  if( wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ) ):
                 ?>
+                <?php echo wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ); ?>
+              <?php elseif($value == 'men'): ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_men.svg" alt="男性">
-              <?php else: ?>
+              <?php else : ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_woman.svg" alt="女性">
               <?php endif; ?>
               </div>
@@ -165,12 +169,12 @@
     </div>
   </section>
 
-  <section id="third" class="member_section">
+  <section id="third" class="member_section" data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h3">
           <span class="jp">第三世代</span>
-          <span class="en">third</span>
+          <span class="en">Third</span>
         </h2>
       </div>
 
@@ -199,10 +203,12 @@
                   $sex = get_field_object('member_sex');
                   $value = $sex['value'];
                   $ptnAbs = get_field('member_pattern'); 
-                  if($value == 'men'):
+                  if( wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ) ):
                 ?>
+                <?php echo wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ); ?>
+              <?php elseif($value == 'men'): ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_men.svg" alt="男性">
-              <?php else: ?>
+              <?php else : ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_woman.svg" alt="女性">
               <?php endif; ?>
               </div>
@@ -219,12 +225,12 @@
     </div>
   </section>
 
-  <section id="fourth" class="member_section">
+  <section id="fourth" class="member_section" data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h3">
           <span class="jp">第四世代</span>
-          <span class="en">fourth</span>
+          <span class="en">Fourth</span>
         </h2>
       </div>
 
@@ -273,7 +279,7 @@
     </div>
   </section>
 
-  <section id="deceased" class="member_section">
+  <section id="deceased" class="member_section" data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h3">
@@ -307,10 +313,12 @@
                   $sex = get_field_object('member_sex');
                   $value = $sex['value'];
                   $ptnAbs = get_field('member_pattern'); 
-                  if($value == 'men'):
+                  if( wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ) ):
                 ?>
+                <?php echo wp_get_attachment_image( get_field('member_thumbnail'), 'member_thumb_image_2x' ); ?>
+              <?php elseif($value == 'men'): ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_men.svg" alt="男性">
-              <?php else: ?>
+              <?php else : ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/member/user_thumbnail_woman.svg" alt="女性">
               <?php endif; ?>
               </div>

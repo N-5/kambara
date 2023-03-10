@@ -9,6 +9,11 @@
       border-bottom: 1px solid $color-border;
       font-size: 15px;
       line-height: 3;
+
+      @media (--md) {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
     }
 
     &_anchor {
@@ -18,14 +23,48 @@
       border-top: 1px solid $color-border;
       border-bottom: 1px solid $color-border;
 
-      a {
+      &_ {
         display: block;
-        padding: 20px 0;
-        text-align: center;
-        width: 80%;
-        margin: 0 auto;
-        border: 1px solid $color-main;
         font-size: 13px;
+
+        @media (--md_max) {
+          padding: 20px 0;
+          position: relative;
+          text-align: center;
+          width: 80%;
+          margin: 0 auto;
+          border: 1px solid $color-main;
+
+          &::after {
+            position: absolute;
+            content: '';
+            top: 21px;
+            right: 20px;
+            width: 8px;
+            height: 8px;
+            border-bottom: 1px solid $color-main;
+            border-right: 1px solid $color-main;
+            transform: rotate(45deg);
+          }
+        }
+
+        @media (--md) {
+          pointer-events: none;
+          margin-bottom: 40px;
+          font-size: 15px;
+        }
+
+        & + * {
+          @media (--md_max) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &_archive {
+      @media (--md_max) {
+        margin-bottom: 40px;
       }
     }
   }

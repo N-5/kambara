@@ -288,7 +288,7 @@
           }
           
           li {
-            margin-bottom: 10px;
+            margin-bottom: 13px;
             line-height: 1.2;
           }
         }
@@ -368,6 +368,7 @@
     .header_logo,
     .header_nav {
       opacity: 0;
+      filter: blur(4px);
       transition-delay: .2s;
     }
 

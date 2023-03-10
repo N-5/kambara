@@ -7,7 +7,7 @@ Template Name: company-profile2
 <?php get_header(); ?>
 
 <main id="company2">
-  <section data-color="dark">
+  <section data-color="dark" data-fade>
     <div class="l-container l-container_mgt">
       <div class="l-container_side">
         <h2 class="m-h2">
@@ -22,7 +22,7 @@ Template Name: company-profile2
 
   <section id="history" data-color="dark">
     <div class="l-container l-container_mgt">
-      <div class="l-container_side">
+      <div class="l-container_side" data-fade>
         <div class="company_sticky">
           <div class="company_anchor">
             <a href="#history" class="js-anchor js-outlink">
@@ -87,7 +87,7 @@ Template Name: company-profile2
       </div>
 
       <div class="l-container_content">
-        <div id="history_a1" class="company_contents">
+        <div id="history_a1" class="company_contents" data-fade>
           <h2 class="m-h2 u-md_max">
             <span class="en">Our History</span><br>
             <span class="jp">常石グループ沿革</span>
@@ -149,7 +149,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div id="history_a2" class="company_contents">
+        <div id="history_a2" class="company_contents" data-fade>
           <h3 class="m-section-h3">
             海運事業
           </h3>
@@ -191,7 +191,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div id="history_a3" class="company_contents">
+        <div id="history_a3" class="company_contents" data-fade>
           <h3 class="m-section-h3">
             エネルギー事業
           </h3>
@@ -215,7 +215,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div id="history_a4" class="company_contents">
+        <div id="history_a4" class="company_contents" data-fade>
           <h3 class="m-section-h3">
             環境事業
           </h3>
@@ -251,7 +251,7 @@ Template Name: company-profile2
           </ul>
         </div>
 
-        <div id="history_a5" class="company_contents">
+        <div id="history_a5" class="company_contents" data-fade>
           <h3 class="m-section-h3">
             ライフ & リゾート事業
           </h3>
@@ -288,7 +288,7 @@ Template Name: company-profile2
   </section>
 
   <section id="companies" data-color="dark">
-    <div class="l-container l-container_mgt">
+    <div class="l-container l-container_mgt" data-fade>
       <div class="l-container_side">
         <div class="company_sticky">
           <h2 class="m-h2 u-md">
@@ -305,7 +305,7 @@ Template Name: company-profile2
             <span class="jp">常石グループの企業情報</span>
           </h2>
 
-          <div class="company_world">
+          <div class="company_world" data-inviewin>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-world.svg" alt="">
             <span>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-text.svg" alt="">
@@ -318,7 +318,7 @@ Template Name: company-profile2
 
   <section id="group" data-color="dark">
     <div class="l-container l-container_mgt">
-      <div class="l-container_side">
+      <div class="l-container_side" data-fade>
           <div class="company_sticky">
             <h2 class="m-h2">
               <span class="en">Our Group</span><br>
@@ -373,7 +373,7 @@ Template Name: company-profile2
             <span class="jp">常石グループ一覧</span>
           </h2>
 
-          <div id="group_a1" class="company_group">
+          <div id="group_a1" class="company_group" data-fade>
             <h3 class="m-section-h3">
               海 運
             </h3>
@@ -410,7 +410,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div id="group_a2" class="company_group">
+          <div id="group_a2" class="company_group" data-fade>
             <h3 class="m-section-h3">
               造 船
             </h3>
@@ -477,7 +477,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div id="group_a3" class="company_group">
+          <div id="group_a3" class="company_group" data-fade>
             <h3 class="m-section-h3">
               エネルギー
             </h3>
@@ -509,7 +509,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div id="group_a4" class="company_group">
+          <div id="group_a4" class="company_group" data-fade>
             <h3 class="m-section-h3">
               環 境
             </h3>
@@ -561,7 +561,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div id="group_a5" class="company_group">
+          <div id="group_a5" class="company_group" data-fade>
             <h3 class="m-section-h3">
               ライフ&リゾート
             </h3>
@@ -608,7 +608,7 @@ Template Name: company-profile2
             </div>
           </div>
 
-          <div id="group_a6" class="company_group">
+          <div id="group_a6" class="company_group" data-fade>
             <h3 class="m-section-h3">
               財 団
             </h3>
@@ -636,11 +636,11 @@ Template Name: company-profile2
           </div>
 
           <div id="group_a7" class="company_group">
-            <h3 class="m-section-h3">
+            <h3 class="m-section-h3" data-fade>
               常石グループおよび関連企業一覧
             </h3>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>海運事業</span> 
               </div>
@@ -725,7 +725,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>造船事業</span> 
               </div>
@@ -860,7 +860,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>エネルギー事業</span> 
               </div>
@@ -885,7 +885,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>環境事業</span> 
               </div>
@@ -950,7 +950,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>ライフ＆リゾート事業</span> 
               </div>
@@ -990,7 +990,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>農業事業</span> 
               </div>
@@ -1025,7 +1025,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>財 団</span> 
               </div>
@@ -1070,7 +1070,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>その他</span> 
               </div>
@@ -1100,7 +1100,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>持ち株会社</span> 
               </div>
@@ -1125,7 +1125,7 @@ Template Name: company-profile2
               </div>
             </div>
 
-            <div class="company_accordion js-accordion is-active">
+            <div class="company_accordion js-accordion js-accordion_toggle is-active" data-fade>
               <div class="company_accordion_parent js-accordion-parent is-active">
                 <span>施 設</span> 
               </div>

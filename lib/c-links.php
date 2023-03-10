@@ -54,7 +54,7 @@
 
 <ul>
   <li>
-    <a href="<?php echo home_url(); ?>/schedule/">
+    <a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo wp_date( 'm' ); ?>/">
       年間スケジュール
     </a>
   </li>

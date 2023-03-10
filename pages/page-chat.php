@@ -9,41 +9,59 @@ Template Name: chat
 <main id="chat">
   <section data-color="dark">
     <div class="l-container">
-      <div class="l-container_side">
+      <div class="l-container_side" data-fade>
         <h2 class="m-h2">
           <span class="en">Family Chat</span><br>
           <span class="jp">ファミリーチャット</span>
         </h2>
 
         <div class="chat_lead u-md">
-          なんでもつぶやこう<br>
-          つぶやきメンバーになる
+          なんでもつぶやこう
         </div>
         
-        <div class="c_chatpost u-md">
-          <?php if (function_exists('user_submitted_posts')) user_submitted_posts(); ?>
+        <div class="chat_anchor js-accordion js-accordion_toggle">
+          <div class="chat_anchor_ js-accordion-parent">
+            自由につぶやいてください。
+          </div>
+          <div class="c_chatpost js-accordion-child">
+            <?php if (function_exists('user_submitted_posts')) user_submitted_posts(); ?>
+          </div>
         </div>
 
-        <div class="chat_anchor u-md_max">
-          <a href="#postarea">
-            自由につぶやいてください。
-          </a>
+        <div class="chat_archive">
+          <h2 class="m-h2">
+            <span class="en">Archive</span><br>
+            <span class="jp">過去の投稿</span>
+          </h2>
+          
+          <ul class="c-category">
+            <?php wp_get_archives('type=yearly&post_type=post'); ?>
+          </ul>
         </div>
       </div>
 
       <div class="l-container_content">
         <div class="c-chatlist">
           <?php
-            $wp_query = new WP_Query();
+          $halfMonthago = date("Y/m/d", strtotime("-6 month"));
+          
+          $wp_query = new WP_Query();
             $args = array(
               'post_type' => 'post',
               'posts_per_page'=> -1,
+              'date_query' => array(
+              array(
+                'inclusive' => true,
+                'after'=> $halfMonthago
+              ),
+            ),
             );
             $wp_query->query($args);
             if( $wp_query->have_posts() ): while( $wp_query->have_posts() ) : $wp_query->the_post();
             $user_id = get_post_field( 'post_author', 100 );
+            $count++;
           ?>
-            <div class="c-chatlist_item">
+            <div class="c-chatlist_item" data-fade data-fade-delay="<?php echo($count); ?>">
               <a href="<?php the_permalink() ?>">
                 <div class="c-chatlist_image">
                   <?php if (has_post_thumbnail()) : ?>
@@ -76,7 +94,7 @@ Template Name: chat
                   }
                 ?>
                 <div class="c-chatlist_author">
-                  <?php the_author(); ?>
+                  投稿：<?php the_author(); ?>
                 </div>
                 <div class="c-chatlist_email">
                   <?php echo get_the_author_meta( 'user_email', $user_id ); ?>

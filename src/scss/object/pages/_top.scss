@@ -99,26 +99,26 @@
           }
 
           &:nth-child(3) {
-            background-image: url('../images/top/kv_1_sp.jpg');
+            background-image: url('../images/top/kv_3_sp.jpg');
 
             @media (--md) {
-              background-image: url('../images/top/kv_1.jpg');
+              background-image: url('../images/top/kv_3.jpg');
             }
           }
 
           &:nth-child(4) {
-            background-image: url('../images/top/kv_2_sp.jpg');
+            background-image: url('../images/top/kv_4_sp.jpg');
 
             @media (--md) {
-              background-image: url('../images/top/kv_2.jpg');
+              background-image: url('../images/top/kv_4.jpg');
             }
           }
 
           &:nth-child(5) {
-            background-image: url('../images/top/kv_1_sp.jpg');
+            background-image: url('../images/top/kv_5_sp.jpg');
 
             @media (--md) {
-              background-image: url('../images/top/kv_1.jpg');
+              background-image: url('../images/top/kv_5.jpg');
             }
           }
 
@@ -316,7 +316,7 @@
       }
     }
 
-    .c-demoSchedule,
+    .c-schedule,
     .c-scheduleCalendar {
       @media (--md) {
         width: 47%;

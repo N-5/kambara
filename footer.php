@@ -63,7 +63,7 @@
 
         <ul>
           <li>
-            <a href="<?php echo home_url(); ?>/schedule/">
+            <a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo wp_date( 'Y' ); ?>/<?php echo wp_date( 'm' ); ?>/">
               年間スケジュール
             </a>
           </li>
@@ -112,6 +112,7 @@
 <!-- end #app -->
 
   <?php wp_footer(); ?>
-  <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js'></script>
+  
+  <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js<?php echo '?ver=' . filemtime( get_stylesheet_directory() . '/assets/js/app.js'); ?>'></script>
 </body>
 </html>

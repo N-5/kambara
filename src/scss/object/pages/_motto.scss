@@ -50,10 +50,15 @@
 
         li {
           margin: 0 20px;
-          writing-mode: vertical-rl;
+            display: grid;
 
           @media (--md) {
             margin: 0 40px;
+          }
+
+          a {
+            writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
           }
         }
       }

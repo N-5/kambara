@@ -1,6 +1,7 @@
 .m-h2 {
   position: relative;
   font-size: 16px;
+  white-space: nowrap;
 
   @media (--md) {
     font-size: 15px;
@@ -28,16 +29,19 @@
   }
 
   .en {
-    display: inline-block;
+    display: grid;
     margin-bottom: 10px;
     font-family: $font-en-serif;
     letter-spacing: .1em;
     writing-mode: vertical-rl;
+    white-space: nowrap;
   }
 
   .jp {
+    display: grid;
     margin-right: 15px;
     font-family: $font-serif;
+    white-space: nowrap;
     writing-mode: vertical-rl;
   }
 }

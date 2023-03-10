@@ -102,7 +102,33 @@ p {
 }
 
 @for $i from 1 through 20 {
-  .u-mg_#{$i * 5}px {
-    margin: 5px * $i;
+  .u-mt_#{$i * 5} {
+    margin-top: 5px * $i;
   }
+}
+
+@for $i from 1 through 20 {
+  .u-mb_#{$i * 5} {
+    margin-bottom: 5px * $i;
+  }
+}
+
+@for $i from 1 through 20 {
+  .u-mr_#{$i * 5} {
+    margin-right: 5px * $i;
+  }
+}
+
+@for $i from 1 through 20 {
+  .u-ml_#{$i * 5} {
+    margin-left: 5px * $i;
+  }
+}
+
+.u-ta_c {
+  text-align: center;
+}
+
+.u-ta_r {
+  text-align: right;
 }
