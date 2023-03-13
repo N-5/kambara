@@ -9,16 +9,16 @@ remove_action('wp_head', 'wp_oembed_add_discovery_links');
 remove_action('wp_head', 'wp_oembed_add_host_js');
 
 // remove emoji
-function disable_emoji() {
-  remove_action('wp_head', 'print_emoji_detection_script', 7);
-  remove_action('admin_print_scripts', 'print_emoji_detection_script');
-  remove_action('wp_print_styles', 'print_emoji_styles');
-  remove_action('admin_print_styles', 'print_emoji_styles');
-  remove_filter('the_content_feed', 'wp_staticize_emoji');
-  remove_filter('comment_text_rss', 'wp_staticize_emoji');
-  remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
-}
-add_action('init', 'disable_emoji');
+// function disable_emoji() {
+//   remove_action('wp_head', 'print_emoji_detection_script', 7);
+//   remove_action('admin_print_scripts', 'print_emoji_detection_script');
+//   remove_action('wp_print_styles', 'print_emoji_styles');
+//   remove_action('admin_print_styles', 'print_emoji_styles');
+//   remove_filter('the_content_feed', 'wp_staticize_emoji');
+//   remove_filter('comment_text_rss', 'wp_staticize_emoji');
+//   remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+// }
+// add_action('init', 'disable_emoji');
 
 //remove update
 function update_nag_hide() {
@@ -106,32 +106,42 @@ function my_require_login() {
 }
 add_action( 'init', 'my_require_login' );
 
-//after login, redirect
-function custom_login_redirect() {
-  $logo_url = get_bloginfo( 'url' );
-  
-  return $logo_url;
-}
-add_filter('login_redirect', 'custom_login_redirect');
-
 //login logo
 function custom_login_logo() {
-	echo '<style type="text/css">.login h1 a { width: 242px !important; height: 54px !important; background: url('.get_bloginfo('template_directory').'/src/images/login/login-logo.png) no-repeat center center !important; margin-bottom: 30px !important; background-size: cover !important;}</style>';
+	// echo '<style type="text/css">.login h1 a { width: 242px !important; height: 54px !important; background: url('.get_bloginfo('template_directory').'/src/images/login/login-logo.png) no-repeat center center !important; margin-bottom: 30px !important; background-size: cover !important;}</style>';
+	echo '<style type="text/css">.login h1 a { width: 242px !important; height: 54px !important; background: url("https://kambara.platyouth.work/login-logo.png") no-repeat center center !important; margin-bottom: 30px !important; background-size: cover !important;}</style>';
 }
 add_action( 'login_enqueue_scripts', 'custom_login_logo' );
 
-function custom_login_logo_url() {
-	//サイトURLを取得
-	$logo_url = get_bloginfo( 'url' );
-	return $logo_url;
+//ログイン画面の言語切替を非表示にする
+add_filter('login_display_language_dropdown', '__return_false');
+
+
+//wp管理画面用CSS イベントの不要な機能を非表示
+function my_admin_style() {
+  echo '<style>
+  .menu-icon-event .wp-submenu li:nth-child(5),
+  .menu-icon-event .wp-submenu li:nth-child(7),
+  body.post-type-event form #poststuff #post-body #postbox-container-2 .inside .eo-venue-combobox-select {
+    display:none;
+  }
+  </style>'.PHP_EOL;
 }
-add_filter( 'login_headerurl', 'custom_login_logo_url' );
+add_action('admin_print_styles', 'my_admin_style');
 
 //a要素のtitle属性を変更
 function custom_login_logo_url_title() {
 	return 'Kambara Family Community';
 }
 add_filter( 'login_headertitle', 'custom_login_logo_url_title' );
+
+//wp title設定
+add_theme_support( 'title-tag' );
+function wp_document_title_separator( $separator ) {
+  $separator = '|';
+  return $separator;
+}
+add_filter( 'document_title_separator', 'wp_document_title_separator' );
 
 //custom img size
 if ( function_exists('add_image_size')) {
@@ -204,7 +214,7 @@ function implement_custom_posts($value='') {
   );
   $company = (object) array(
     "slug" => "company",
-    "name" => "会社紹介一覧",
+    "name" => "会社紹介",
     "has_archive" => true,
   );
   $groupmagazine = (object) array(
@@ -308,15 +318,49 @@ function add_custom($value) {
 add_action( "init", "implement_custom_posts", 0 );
 
 
+//ユーザー登録すると自動的に非公開ページが作成
+function create_user_page ( $user_id ) {
+  $user_info = get_userdata($user_id);
+  $user_name = $user_info->user_login;
+    $new_page = array(
+        'post_type' => 'member',
+        'post_title' => $user_name,
+        'post_name' => $user_name,
+        'post_status' => 'private',
+        'post_author' => $user_id,
+    );
+  wp_insert_post($new_page);
+}
+add_action('user_register', 'create_user_page' );
 
-//プレビューを押したときのリンク先を変更
-// add_filter( 'preview_post_link', function($link) {
-// 	global $post_type;
-//   $pdf_url = the_field('tsuneishi_pdf');
-//   $hoge = $pdf_url.'?preview=true';
+
+//購読者がログインしたらダッシュボードではなく指定ページに飛ぶようにする
+add_action('wp_login', 'redirect_roll', 10, 2);
+function redirect_roll($user_login, $user){
+    $home_url = get_bloginfo( 'url' );
+    if( $user->roles[0] == 'editor' ){ // administrator, editor, contributor, subscriber
+        wp_redirect( $home_url );
+        exit();
+    }
+}
+
+
+//プレビューを押したときのリンク先を変更 みろく、つねいし
+add_filter( 'preview_post_link', function($link) {
+	global $post_type;
+  $home_url = get_bloginfo( 'url' );
+  $tsuneishi_pdf_url = get_field('tsuneishi_pdf');
+  $miroku_pdf_url = get_field('miroku_pdf');
+  $hoge = $tsuneishi_pdf_url.'?preview=true';
+  $tsuneishi_preview_url = trim($tsuneishi_pdf_url, $home_url);
+  $miroku_preview_url = trim($miroku_pdf_url, $home_url);
+
   
-// 	if($post_type == 'groupmagazine'){
-// 		$link=home_url($hoge);//preview=trueがないとpreview判定にならない
-// 	};
-// 	return $link;
-// });
+	if($post_type == 'groupmagazine'){
+		$link=home_url('wp'.$tsuneishi_preview_url.'?preview=true');//preview=trueがないとpreview判定にならない
+	};
+  if($post_type == 'familymagazine'){
+		$link=home_url('wp'.$miroku_preview_url.'?preview=true');//preview=trueがないとpreview判定にならない
+	};
+	return $link;
+});

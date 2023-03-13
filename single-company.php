@@ -3,7 +3,7 @@
 <main id="interview">
   <section data-color="dark">
     <div class="l-container">
-      <h2 class="m-h2">
+      <h2 class="m-h2 u-md_max">
         <span class="en">Company</span><br>
         <span class="jp">会社紹介</span>
       </h2>
@@ -25,21 +25,27 @@
               <?php the_title() ?>
             </div>
             <div class="c-interview_title" data-fade>
-              <?php the_field('interview_title'); ?>
+              <?php if( get_field('interview_title') ):?>
+                <?php the_field('interview_title'); ?>
+              <?php endif; ?>
             </div>
             <div class="c-interview_role" data-fade>
-              <?php the_field('interview_role'); ?>
+              <?php if( get_field('interview_role') ):?>
+                <?php the_field('interview_role'); ?>
+              <?php endif; ?>
             </div>
             <div class="c-interview_sentence" data-fade>
               <p>
-                <?php the_field('interview_text'); ?>
+                <?php if( get_field('interview_text') ):?>
+                  <?php the_field('interview_text'); ?>
+                <?php endif; ?>
               </p>
             </div>
           </div>
         </div>
 
           <?php if(have_rows('interview_contents')): ?>
-          <div class="c-interviewFaq" data-fade>
+          <div class="c-interviewFaq c-interviewFaq_company" data-fade>
             <?php 
               while(have_rows('interview_contents')): the_row();
               $imgAbs = get_sub_field('interview_answer_thumb');

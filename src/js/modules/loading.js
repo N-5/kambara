@@ -1,4 +1,3 @@
-import { pause } from 'browser-sync';
 import $ from 'jquery';
 
 export default () => {
@@ -31,7 +30,7 @@ export default () => {
 
     var $nontarget = $('a:not(".js-outlink"), a[href^=https]:not([target="_blank"])')
 
-    $(document).on('click', $nontarget, function (event) {
+    $nontarget.on('click', $nontarget, function (event) {
 
       event.preventDefault();
       var linkUrl = $(this).attr('href');

@@ -32,7 +32,7 @@
                 <dd><?php the_field('member_hobby'); ?></dd>
                 <dt>特技</dt>
                 <dd><?php the_field('member_skill'); ?></dd>
-                <dt>会社名(学校名)</dt>
+                <dt>会社名・学校名</dt>
                 <dd><?php the_field('member_bio'); ?></dd>
                 <dt>連絡先</dt>
                 <dd><?php if( get_field('member_to_check') ): ?><a href="mailto:<?php the_field('member_to'); ?>"><?php endif; ?><?php the_field('member_to'); ?><?php if( get_field('member_to_check') ): ?></a><?php endif; ?></dd>

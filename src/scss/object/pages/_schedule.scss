@@ -32,6 +32,12 @@
 
       &_date {
         font-family: $font-en-sans;
+        color: $color-main;
+        font-size: 14px;
+
+        @media (--md) {
+          font-size: 16px;
+        }
       }
 
       &_title {

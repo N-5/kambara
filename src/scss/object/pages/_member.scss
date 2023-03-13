@@ -95,7 +95,11 @@
           dd {
             min-height: 30px;
             line-height: 1.6;
-            font-size: 16px;
+            font-size: 13px;
+
+            @media (--md) {
+              font-size: 14px;
+            }
           }
         }
       }

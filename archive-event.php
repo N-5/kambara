@@ -75,15 +75,17 @@
 			$yearNext= $year_jp + 1;
 			break;
 		default:
-			$monthNext = wp_date( 'm' );
-			$monthPrev = wp_date( 'm' );
+			$monthNext = 'N/A';
+			$monthPrev = 'N/A';
+			$monthEn = 'N/A';
+			$yearNext = 'N/A';
 		}
 ?>
 
 <main id="schedule">
   <section data-color="dark">
 		<div class="l-container l-container_mgt">
-			<div class="l-container_side">
+			<div class="l-container_side" data-fade>
 				<h2 class="m-h2">
 					<span class="en">Annual Schedule</span><br>
 					<span class="jp">年間スケジュール</span>
@@ -96,11 +98,11 @@
 			</div>
 
 			<div class="l-container_content">
-				<div class="c-schedule c-schedule__archive">
+				<div class="c-schedule c-schedule__archive" data-fade>
 					<?php echo do_shortcode($shortcode) ?>
 				</div>
 
-				<div class="schedule_pager">
+				<div class="schedule_pager" data-fade>
 					<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo $yearPrev ?>/<?php echo $monthPrev ?>/">前の月</a>
 					<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo $yearNext ?>/<?php echo $monthNext ?>/">次の月</a>
 				</div>
@@ -108,15 +110,15 @@
 				<div class="schedule_postarea">
 					<?php if ( have_posts() ):  ?>
 						<?php while ( have_posts() ) : the_post() ?>
-						<div class="schedule_postarea_item">
+						<div class="schedule_postarea_item" data-fade>
 							<div class="schedule_postarea_date">
-								<?php echo eo_format_event_occurrence(); ?>
+								<?php echo eo_get_the_start( 'm/d' ); ?><?php if(eo_get_the_end('m/d') !== eo_get_the_start('m/d') ): ?> - <?php echo eo_get_the_end( 'm/d' ); ?><?php endif; ?>
 
-								<?php if ( get_the_terms( get_the_ID(), 'event-category' ) && ! is_wp_error( get_the_terms( get_the_ID(), 'event-category' ) ) ) { ?>
+								<!-- <?php if ( get_the_terms( get_the_ID(), 'event-category' ) && ! is_wp_error( get_the_terms( get_the_ID(), 'event-category' ) ) ) { ?>
 								<div class="c-searchformResult_post u-ml_10">
 									<?php echo get_the_term_list( get_the_ID(),'event-category', '', ', ', '' ); ?>
 								</div>
-							<?php } ?>
+								<?php } ?> -->
 							</div>
 							<h2 class="schedule_postarea_title">
 								<?php the_title() ?>
@@ -129,12 +131,12 @@
 							</div>
 							</div>
 						<?php endwhile; ?>
-							<div class="schedule_pager">
+							<div class="schedule_pager" data-fade>
 								<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo $yearPrev ?>/<?php echo $monthPrev ?>/">前の月</a>
 								<a href="<?php echo home_url(); ?>/schedule/event/on/<?php echo $yearNext ?>/<?php echo $monthNext ?>/">次の月</a>
 							</div>
 						<?php else: ?>
-							<p class="u-ta_c u-mt_100"><?php echo $year_jp ?>年<?php echo $month_jp ?>のスケジュールは登録されていません。</p>
+							<p class="u-ta_c u-mt_100" data-fade><?php echo $year_jp ?>年<?php echo $month_jp ?>のスケジュールは登録されていません。</p>
 					<?php endif; ?>
 				</div>
 			</div>

@@ -28,7 +28,7 @@ Template Name: chat
           </div>
         </div>
 
-        <div class="chat_archive">
+        <div class="chat_archive u-md">
           <h2 class="m-h2">
             <span class="en">Archive</span><br>
             <span class="jp">過去の投稿</span>
@@ -94,15 +94,26 @@ Template Name: chat
                   }
                 ?>
                 <div class="c-chatlist_author">
-                  投稿：<?php the_author(); ?>
+                  投稿者：<?php the_author(); ?>
                 </div>
-                <div class="c-chatlist_email">
+                <!-- <div class="c-chatlist_email">
                   <?php echo get_the_author_meta( 'user_email', $user_id ); ?>
-                </div>
+                </div> -->
               </a>
             </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
+      </div>
+
+      <div class="chat_archive u-mt_50 u-md_max" data-fade>
+        <h2 class="m-h2 u-mb_30">
+          <span class="en">Archive</span><br>
+          <span class="jp">過去の投稿</span>
+        </h2>
+        
+        <ul class="c-category">
+          <?php wp_get_archives('type=yearly&post_type=post'); ?>
+        </ul>
       </div>
     </div>
   </section>

@@ -1,5 +1,9 @@
 #news,
 #media {
+  .c-searchformResult_post {
+    pointer-events: none;
+  }
+  
   .news {
     position: relative;
   }

@@ -10,7 +10,7 @@ import component from './modules/component';
 import inview from './modules/inview';
 
 export default [
-  loading(),
+  // loading(),
   component(),
   inview()
 ];

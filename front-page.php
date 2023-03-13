@@ -17,10 +17,6 @@
     </div>
   </section>
 
-  <p>
-      <a href="https://sukigyu.net/event-calendar/" target="_blank">aaaa</a>
-    </p>
-
   <section class="news" data-color="dark" data-fade>
     <div class="l-container">
       <div class="wrapper">
@@ -200,8 +196,9 @@
                   ));
                     if($events):
                     foreach ($events as $event):
-                      $time = $event->post_modified_gmt;
-                      $time_format = date('Y-m-d',  strtotime($time));
+                      // var_dump($event);
+                      $time = $event->StartDate;
+                      $time_format = date('m/d',  strtotime($time));
                       $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
                       
                       echo '<div class="schedule_month_archive_post">';

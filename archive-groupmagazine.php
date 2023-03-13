@@ -17,7 +17,7 @@
             $count++;
           ?>
           <div class="c-groupmagazine_item" data-fade data-fade-delay="<?php echo($count); ?>">
-            <a href="<?php the_field('tsuneishi_pdf'); ?>" target="_blank">
+            <a href="<?php the_field('tsuneishi_pdf'); ?>" target="_blank" class="js-outlink">
               <div class="c-groupmagazine_image">
                 <?php echo wp_get_attachment_image( get_field('tsuneishi_thumbnail'), 'tsuneishi_image' ); ?>
               </div>

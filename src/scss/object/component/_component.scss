@@ -922,6 +922,10 @@
           border-color: $color-white;
         }
 
+        .fc-today {
+          background-color: initial;
+        }
+
         .fc-day-number,
         .fc-other-month {
           opacity: 1;
@@ -1456,6 +1460,16 @@
     text-align: center;
     margin-bottom: 30px;
   }
+
+  &.c-interviewFaq_company {
+    .c-interviewFaq_q {
+      font-weight: 700;
+    }
+
+    .c-interviewFaq_a {
+      font-weight: 300;
+    }
+  }
 }
 
 .c-member {
@@ -1546,6 +1560,10 @@
     appearance: none;
   }
 
+  input.chosen-search-input {
+    font-size: 0;
+  }
+
   input[type="submit"] {
     margin: 0 auto;
     padding: 10px 20px;
@@ -1568,14 +1586,9 @@
     }
   }
 
-
   #usp-submit {
     margin-top: 20px;
     text-align: center;
-  }
-
-  .disabled-result {
-    font-size: 11px;
   }
 
   .chosen-choices {
@@ -1592,8 +1605,100 @@
 
   .chosen-container {
     width: 100% !important;
+
+    &.chosen-container-active {
+      position: relative;
+
+      .disabled-result {
+        position: relative;
+        padding-top: 5px;
+        font-size: 0;
+
+        &::before {
+          position: absolute;
+          top: -35px;
+          left: 5px;
+          content: "下記からタグを選択";
+          font-size: 12px;
+          width: 100%;
+          white-space: nowrap;
+        }
+      }
+
+      .active-result {
+        &::before {
+          content: '#';
+          position: relative;
+          display: inline-block;;
+        }
+      }
+
+      .chosen-drop {
+        height: 100% !important;
+        font-size: 12px !important;
+        padding: 10px !important;
+        border-right: 1px solid $color-main;
+        border-left: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+
+        .active-result {
+          display: inline-block;
+          margin-bottom: 5px;
+          margin-right: 5px;
+          border: 1px solid $color-main;
+          padding: 4px 10px;
+          font-size: 10px;
+          border-radius: 30px;
+        }
+
+        .chosen-results {
+          .result-selected {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 11px;
+            color: #7c7c7c;
+
+            &::before {
+              content: '#';
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    .chosen-choices {
+      .search-choice {
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        border: 1px solid #7c7c7c;
+        padding: 4px 10px;
+        font-size: 12px;
+        border-radius: 30px;
+
+        span {
+          display: inline-block;
+          font-size: 11px;
+          color: #7c7c7c;
+
+          &::before {
+            content: '#';
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .chosen-drop {
+      height: 0;
+      font-size: 0;
+      padding: 0;
+      background-color: #f3f3f4;
+    }
   }
 
+  #usp-upload-message,
   label[for="user-submitted-image"] {
     display: none;
   }

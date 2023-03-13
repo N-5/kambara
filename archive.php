@@ -9,25 +9,12 @@
           <span class="jp">ファミリーチャット</span>
         </h2>
 
-        <div class="chat_lead u-md">
-          なんでもつぶやこう
-        </div>
-        
-        <div class="chat_anchor js-accordion js-accordion_toggle">
-          <div class="chat_anchor_ js-accordion-parent">
-            自由につぶやいてください。
-          </div>
-          <div class="c_chatpost js-accordion-child">
-            <?php if (function_exists('user_submitted_posts')) user_submitted_posts(); ?>
-          </div>
-        </div>
-
-        <div class="chat_archive">
+        <div class="chat_archive u-md">
           <h2 class="m-h2">
             <span class="en">Archive</span><br>
             <span class="jp">過去の投稿</span>
           </h2>
-
+          
           <ul class="c-category">
             <?php wp_get_archives('type=yearly&post_type=post'); ?>
           </ul>
@@ -88,6 +75,23 @@
             <?php endwhile; ?>
           <?php endif; ?>
         </div>
+      </div>
+
+      <div class="chat_archive u-mt_50 u-md_max" data-fade>
+        <h2 class="m-h2 u-mb_30">
+          <span class="en">Archive</span><br>
+          <span class="jp">過去の投稿</span>
+        </h2>
+        
+        <ul class="c-category">
+          <?php wp_get_archives('type=yearly&post_type=post'); ?>
+        </ul>
+      </div>
+
+      <div class="c-backlink u-md_max">
+        <a href="<?php echo home_url(); ?>/chat/">
+          Back
+        </a>
       </div>
     </div>
   </section>

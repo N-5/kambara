@@ -176,7 +176,7 @@ export default () => {
       var $target = '.js-floatingMenu';
       var startPos = 0;
 
-      $(window).on('scroll', function () {
+      $(window).on('load scroll', function () {
         const currentPos = $(this).scrollTop();
 
         if (currentPos > startPos) {
@@ -267,7 +267,7 @@ export default () => {
         window.location = $(this).find('a').attr('href');
       });
 
-      $('a').each(function () {
+      $('a:not(".js-outlink")').each(function () {
         let href = $(this).attr('href');
         let $target = $(this).attr('target');
 

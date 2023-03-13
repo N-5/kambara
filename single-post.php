@@ -43,14 +43,14 @@
           </div>
           <div class="c-chatlist__box">
             <div class="c-chatlist__author">
-              投稿：<?php the_author(); ?>
+              投稿者：<?php the_author(); ?>
             </div>
-            <div class="c-chatlist__email">
+            <!-- <div class="c-chatlist__email">
               メールアドレス：<?php 
                 $user_id = get_post_field( 'post_author', 100 );
                 echo get_the_author_meta( 'user_email', $user_id );
               ?>
-            </div>
+            </div> -->
           </div>
       </div>
     </div>

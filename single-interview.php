@@ -25,14 +25,20 @@
               <?php the_title() ?>
             </div>
             <div class="c-interview_title" data-fade>
-              <?php the_field('interview_title'); ?>
+              <?php if( get_field('interview_title') ):?>
+                <?php the_field('interview_title'); ?>
+              <?php endif; ?>
             </div>
             <div class="c-interview_role" data-fade>
-              <?php the_field('interview_role'); ?>
+              <?php if( get_field('interview_role') ):?>
+                <?php the_field('interview_role'); ?>
+              <?php endif; ?>
             </div>
             <div class="c-interview_sentence" data-fade>
               <p>
-                <?php the_field('interview_text'); ?>
+                <?php if( get_field('interview_text') ):?>
+                  <?php the_field('interview_text'); ?>
+                <?php endif; ?>
               </p>
             </div>
           </div>
